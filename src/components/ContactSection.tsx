@@ -15,7 +15,7 @@ const ContactSection = () => {
       <div className="container mx-auto px-6">
         <h2 className="mb-3 text-3xl font-bold text-primary md:text-4xl">Get in touch</h2>
         <p className="mb-12 max-w-lg text-muted-foreground">
-          Tell us about your goals. We'll reach out within one business day.
+          Tell us about your goals. We'll reach out within one business day to discuss your needs.
         </p>
 
         <div className="grid gap-12 lg:grid-cols-2">

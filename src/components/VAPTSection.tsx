@@ -45,7 +45,7 @@ const VAPTSection = () => {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2"><span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />Vulnerabilities exist across all environments: applications, network devices, and cloud infrastructure.</li>
               <li className="flex items-start gap-2"><span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />SMBs are frequently targeted; proactive testing reduces financial and reputational risk.</li>
-              <li className="flex items-start gap-2"><span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />Supports compliance initiatives (e.g., GDPR, ISO 27001, PCI DSS) with evidence-based reporting.</li>
+              <li className="flex items-start gap-2"><span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />Supports compliance initiatives (e.g., HIPAA, SOC 2, PCI DSS, ISO 27001) with evidence-based reporting.</li>
             </ul>
           </div>
 
