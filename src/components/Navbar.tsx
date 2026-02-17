@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 border-b border-border bg-background">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-2">
-          <img src={logoHorizontal} alt="Crabtree Solutions" className="h-16" />
+          <img src={logoHorizontal} alt="Crabtree Solutions" className="h-32" />
         </a>
 
         <div className="hidden items-center gap-6 lg:flex">
