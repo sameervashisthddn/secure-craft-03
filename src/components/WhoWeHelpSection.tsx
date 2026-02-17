@@ -1,9 +1,8 @@
 const items = [
-  "Handle sensitive or regulated data",
-  "Require secure remote access to critical systems",
-  "Need improved visibility and control over their IT environment",
-  "Want to reduce infrastructure risks and improve reliability",
-  "Require compliance-aligned infrastructure support",
+  "Handle sensitive data",
+  "Require secure remote access",
+  "Need infrastructure stability and reliability",
+  "Require compliance-aligned IT infrastructure",
 ];
 
 const WhoWeHelpSection = () => {

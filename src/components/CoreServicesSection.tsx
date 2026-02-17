@@ -3,7 +3,7 @@ import { Server, ShieldCheck, Globe, ClipboardCheck, Lock } from "lucide-react";
 const services = [
   {
     icon: Server,
-    title: "Managed IT & Infrastructure Management",
+    title: "Managed IT & Infrastructure — Built for Security, Stability, and Reliability",
     text: "Ongoing management of servers, endpoints, networks, and cloud infrastructure to ensure stability and reliability.",
   },
   {
