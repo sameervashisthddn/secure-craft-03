@@ -6,12 +6,12 @@ import vmwareLogo from "@/assets/vendors/vmware.png";
 import ciscoLogo from "@/assets/vendors/cisco.png";
 
 const techs = [
-  { name: "Fortinet", logo: fortinetLogo },
-  { name: "Sophos", logo: sophosLogo },
-  { name: "SentinelOne", logo: sentineloneLogo },
-  { name: "Microsoft", logo: microsoftLogo },
-  { name: "VMware", logo: vmwareLogo },
-  { name: "Cisco", logo: ciscoLogo },
+  { name: "Fortinet", logo: fortinetLogo, className: "h-12 max-w-[140px]" },
+  { name: "Sophos", logo: sophosLogo, className: "h-36 max-w-[200px]" },
+  { name: "SentinelOne", logo: sentineloneLogo, className: "h-36 max-w-[200px]" },
+  { name: "Microsoft", logo: microsoftLogo, className: "h-12 max-w-[140px]" },
+  { name: "VMware", logo: vmwareLogo, className: "h-12 max-w-[140px]" },
+  { name: "Cisco", logo: ciscoLogo, className: "h-12 max-w-[140px]" },
 ];
 
 const TechWeSupport = () => {
@@ -30,7 +30,7 @@ const TechWeSupport = () => {
               <img
                 src={t.logo}
                 alt={t.name}
-                className="h-12 max-w-[140px] object-contain"
+                className={`${t.className} object-contain`}
               />
             </div>
           ))}
