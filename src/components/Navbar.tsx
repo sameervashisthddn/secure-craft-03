@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoHorizontal from "@/assets/logo-horizontal.jpeg";
+import logo from "@/assets/logo-new.jpeg";
 
 const navLinks = [
   { label: "Home", href: "#" },
@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 border-b border-border bg-background">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-2">
-          <img src={logoHorizontal} alt="Crabtree Solutions" style={{ height: '179px' }} />
+          <img src={logo} alt="Crabtree Solutions Inc." className="h-16" />
         </a>
 
         <div className="hidden items-center gap-6 lg:flex">
