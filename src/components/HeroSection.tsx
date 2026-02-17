@@ -15,10 +15,10 @@ const HeroSection = () => {
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
           <div className="flex-1">
             <h1 className="mb-6 text-4xl font-extrabold leading-tight text-primary md:text-5xl lg:text-[3.25rem]">
-              Trusted IT & Cybersecurity Services for Modern Businesses
+              We Identify Your IT & Security Gaps First — Then Deliver the Right Solution
             </h1>
             <p className="mb-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              We help organizations plan, implement, and scale secure, reliable infrastructure. Reduce risk, accelerate delivery, and keep your teams focused on growth.
+              Managed IT, Cybersecurity, and Compliance-Aligned Infrastructure for US Businesses Handling Sensitive Data
             </p>
             <div className="mb-8 flex flex-wrap gap-3">
               <a href="#contact">
