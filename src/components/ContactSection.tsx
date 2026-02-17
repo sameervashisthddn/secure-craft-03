@@ -65,8 +65,8 @@ const ContactSection = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <div>
-                  <p>D 301 Sahastradhara Road</p>
-                  <p>Dehradun, Uttarakhand 248001</p>
+                  <p>11700 Lebanon Rd, Suite 924</p>
+                  <p>Frisco, TX 75035</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
