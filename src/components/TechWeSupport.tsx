@@ -30,7 +30,7 @@ const TechWeSupport = () => {
               <img
                 src={t.logo}
                 alt={t.name}
-                className="h-10 max-w-[120px] object-contain"
+                className="h-12 max-w-[140px] object-contain"
               />
             </div>
           ))}
