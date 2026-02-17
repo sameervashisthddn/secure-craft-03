@@ -1,61 +1,63 @@
-import { Server, ShieldCheck, Globe, Network, Headset, Lock } from "lucide-react";
+import { Shield, AlertTriangle, Search, Cloud, Users, Briefcase } from "lucide-react";
 
 const services = [
   {
-    icon: Server,
-    title: "Managed IT Services",
-    description: "End-to-end IT management including server installation, network design, infrastructure monitoring, and remote/on-site support.",
+    icon: Shield,
+    title: "Managed Detection & Response (MDR)",
+    items: ["24/7 threat hunting and response", "Expert-led triage and remediation", "Coverage across endpoint, network, cloud, and email"],
   },
   {
-    icon: ShieldCheck,
-    title: "Cybersecurity Solutions",
-    description: "Enterprise-grade protection with firewall management, endpoint security, threat monitoring, and SOC-2 aligned architecture.",
+    icon: AlertTriangle,
+    title: "Incident Response",
+    items: ["Rapid containment and recovery", "Forensics and root-cause analysis", "Guided remediation and reporting"],
   },
   {
-    icon: Lock,
-    title: "Secure Remote Access",
-    description: "Dedicated VPN infrastructure, secure access to internal systems, and controlled connectivity for distributed global teams.",
+    icon: Search,
+    title: "Managed Risk / Vulnerability Management",
+    items: ["Identify critical vulnerabilities", "Attack surface reduction", "Continuous monitoring and prioritization"],
   },
   {
-    icon: Network,
-    title: "Infrastructure & Network",
-    description: "Active Directory, network segmentation, hybrid cloud integration, performance optimization, and system hardening.",
+    icon: Cloud,
+    title: "Cloud Security & CSPM",
+    items: ["Posture management and compliance", "Misconfiguration and risk detection", "Governance best practices"],
   },
   {
-    icon: Headset,
-    title: "IT Support & Outsourcing",
-    description: "Dedicated IT engineers for day-to-day operations, user support, preventive maintenance, and continuous monitoring.",
+    icon: Users,
+    title: "Security Awareness & Phishing Simulation",
+    items: ["Phishing campaigns and training", "User risk scoring", "Progress tracking and reporting"],
   },
   {
-    icon: Globe,
-    title: "IT Consulting",
-    description: "Strategic IT planning, infrastructure assessment, risk identification, and roadmap development aligned with business goals.",
+    icon: Briefcase,
+    title: "Professional Services",
+    items: ["Solution design and deployment", "Migrations and modernization", "Documentation and handover"],
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 bg-gradient-dark">
+    <section id="services" className="section-padding">
       <div className="container mx-auto px-6">
-        <div className="mb-16 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">What We Do</p>
-          <h2 className="font-display text-4xl font-bold text-foreground md:text-5xl">
-            Comprehensive IT &{" "}
-            <span className="text-gradient-cyber">Security</span> Services
-          </h2>
-        </div>
+        <h2 className="mb-3 text-3xl font-bold text-primary md:text-4xl">Our Services</h2>
+        <p className="mb-12 max-w-2xl text-muted-foreground">
+          Align your security program with MDR, Incident Response, CSPM, and awareness training—delivered by certified experts.
+        </p>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
-            <div
-              key={s.title}
-              className="group rounded-xl border border-border/50 bg-gradient-card p-8 shadow-card transition-all duration-300 hover:border-primary/30 hover:shadow-glow"
-            >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
-                <s.icon className="h-6 w-6" />
-              </div>
-              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{s.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{s.description}</p>
+            <div key={s.title} className="rounded-xl border border-border bg-background p-6 transition-shadow hover:shadow-md">
+              <s.icon className="mb-4 h-8 w-8 text-primary" />
+              <h3 className="mb-3 text-lg font-semibold text-foreground">{s.title}</h3>
+              <ul className="space-y-2">
+                {s.items.map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a href="#contact" className="mt-4 inline-block text-sm font-medium text-primary hover:underline">
+                Request assessment →
+              </a>
             </div>
           ))}
         </div>
