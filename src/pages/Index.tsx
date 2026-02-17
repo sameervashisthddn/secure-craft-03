@@ -1,8 +1,11 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import ProductsSection from "@/components/ProductsSection";
-import ServicesSection from "@/components/ServicesSection";
-import ManagedITSection from "@/components/ManagedITSection";
+import WhatWeDoSection from "@/components/WhatWeDoSection";
+import OurApproachSection from "@/components/OurApproachSection";
+import CoreServicesSection from "@/components/CoreServicesSection";
+import WhoWeHelpSection from "@/components/WhoWeHelpSection";
+import OutcomesSection from "@/components/OutcomesSection";
+import FinalCTASection from "@/components/FinalCTASection";
 import VAPTSection from "@/components/VAPTSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
@@ -13,9 +16,12 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      <ProductsSection />
-      <ServicesSection />
-      <ManagedITSection />
+      <WhatWeDoSection />
+      <OurApproachSection />
+      <CoreServicesSection />
+      <WhoWeHelpSection />
+      <OutcomesSection />
+      <FinalCTASection />
       <VAPTSection />
       <AboutSection />
       <ContactSection />

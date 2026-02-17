@@ -1,13 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero-services.jpg";
 
-const highlights = [
-  "HIPAA & Legal Compliance",
-  "Managed IT & Cloud",
-  "Security Assessments",
-  "24/7 Support",
-];
-
 const HeroSection = () => {
   return (
     <section className="section-padding">
@@ -18,24 +11,19 @@ const HeroSection = () => {
               We Identify Your IT & Security Gaps First — Then Deliver the Right Solution
             </h1>
             <p className="mb-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              Managed IT, Cybersecurity, and Compliance-Aligned Infrastructure for US Businesses Handling Sensitive Data
+              Managed IT, Cybersecurity, and Infrastructure Support built around your actual business needs. We assess your environment, identify risks and inefficiencies, and implement reliable, security-focused solutions — without unnecessary product sales.
             </p>
-            <div className="mb-8 flex flex-wrap gap-3">
+            <div className="mb-4 flex flex-wrap gap-3">
               <a href="#contact">
-                <Button size="lg">Get a Free Quote</Button>
+                <Button size="lg">Schedule Security Assessment</Button>
               </a>
               <a href="#services">
-                <Button size="lg" variant="outline">Explore Services</Button>
+                <Button size="lg" variant="outline">Review Our Services</Button>
               </a>
             </div>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-2">
-              {highlights.map((h) => (
-                <div key={h} className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <span className="h-2 w-2 shrink-0 rounded-full bg-primary" />
-                  {h}
-                </div>
-              ))}
-            </div>
+            <p className="max-w-md text-xs leading-relaxed text-muted-foreground">
+              Supporting businesses handling sensitive data, compliance requirements, and secure remote access environments.
+            </p>
           </div>
           <div className="flex-1">
             <img
