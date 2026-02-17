@@ -1,46 +1,48 @@
-import { Shield, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroImg from "@/assets/hero-services.jpg";
+
+const highlights = [
+  "Managed IT & Cloud",
+  "Security Assessments",
+  "Compliance & Governance",
+  "24/7 Support",
+];
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <img src={heroBg} alt="Cybersecurity shield" className="h-full w-full object-cover opacity-30" />
-        <div className="absolute inset-0 bg-gradient-dark" style={{ opacity: 0.7 }} />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-      </div>
-
-      <div className="container relative z-10 mx-auto px-6 pt-32 pb-20">
-        <div className="max-w-3xl">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm text-primary animate-fade-in-up">
-            <Shield className="h-4 w-4" />
-            Managed IT & Cybersecurity
+    <section className="section-padding">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
+          <div className="flex-1">
+            <h1 className="mb-6 text-4xl font-extrabold leading-tight text-primary md:text-5xl lg:text-[3.25rem]">
+              Trusted IT & Cybersecurity Services for Modern Businesses
+            </h1>
+            <p className="mb-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
+              We help organizations plan, implement, and scale secure, reliable infrastructure. Reduce risk, accelerate delivery, and keep your teams focused on growth.
+            </p>
+            <div className="mb-8 flex flex-wrap gap-3">
+              <a href="#contact">
+                <Button size="lg">Get a Free Quote</Button>
+              </a>
+              <a href="#services">
+                <Button size="lg" variant="outline">Explore Services</Button>
+              </a>
+            </div>
+            <div className="grid grid-cols-2 gap-x-8 gap-y-2">
+              {highlights.map((h) => (
+                <div key={h} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-primary" />
+                  {h}
+                </div>
+              ))}
+            </div>
           </div>
-
-          <h1 className="mb-6 font-display text-5xl font-bold leading-tight tracking-tight text-foreground md:text-7xl animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Secure, Reliable &{" "}
-            <span className="text-gradient-cyber">Scalable</span>{" "}
-            IT Solutions
-          </h1>
-
-          <p className="mb-10 max-w-xl text-lg leading-relaxed text-muted-foreground animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Crabtree Solutions Inc. helps businesses design, secure, and manage their IT infrastructure with enterprise-grade cybersecurity and proactive support.
-          </p>
-
-          <div className="flex flex-col gap-4 sm:flex-row animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            <a href="#contact">
-              <Button size="lg" className="bg-gradient-cyber text-primary-foreground font-semibold shadow-glow hover:opacity-90 px-8">
-                Schedule a Consultation
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </a>
-            <a href="#services">
-              <Button size="lg" variant="outline" className="border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary/50 px-8">
-                Explore Services
-              </Button>
-            </a>
+          <div className="flex-1">
+            <img
+              src={heroImg}
+              alt="Professional IT services"
+              className="w-full rounded-xl object-cover shadow-lg"
+            />
           </div>
         </div>
       </div>
