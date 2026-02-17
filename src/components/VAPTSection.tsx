@@ -4,7 +4,7 @@ import { ShieldCheck, Globe, Cpu } from "lucide-react";
 const vaptCards = [
   { icon: ShieldCheck, title: "Application Security Testing", desc: "Web and mobile application assessments, including business logic testing and secure code review." },
   { icon: Globe, title: "Network & Cloud Penetration Testing", desc: "Internal/external network testing, cloud configuration reviews, and exploitation of misconfigurations." },
-  { icon: Cpu, title: "IoT & Device Security", desc: "IoT, medical devices, and embedded systems assessments." },
+  { icon: Cpu, title: "Connected Device Security Assessment", desc: "We identify security risks in network-connected devices such as biometric systems, medical equipment, cameras, and other embedded devices to prevent unauthorized access and network compromise." },
 ];
 
 const steps = [
