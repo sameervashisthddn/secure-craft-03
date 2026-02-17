@@ -39,7 +39,7 @@ const ServicesSection = () => {
       <div className="container mx-auto px-6">
         <h2 className="mb-3 text-3xl font-bold text-primary md:text-4xl">Our Services</h2>
         <p className="mb-12 max-w-2xl text-muted-foreground">
-          Align your security program with MDR, Incident Response, CSPM, and awareness training—delivered by certified experts.
+          Align your security program with MDR, Incident Response, CSPM, and awareness training — built for healthcare, legal, and SMB compliance requirements.
         </p>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

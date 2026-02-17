@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero-services.jpg";
 
 const highlights = [
+  "HIPAA & Legal Compliance",
   "Managed IT & Cloud",
   "Security Assessments",
-  "Compliance & Governance",
   "24/7 Support",
 ];
 
