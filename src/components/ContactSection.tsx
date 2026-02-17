@@ -2,12 +2,43 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone } from "lucide-react";
 
+const MAX_NAME = 100;
+const MAX_EMAIL = 255;
+const MAX_MESSAGE = 1000;
+
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
+
+  const validate = () => {
+    const errs: typeof errors = {};
+    const name = form.name.trim();
+    const email = form.email.trim();
+    const message = form.message.trim();
+
+    if (!name) errs.name = "Name is required.";
+    else if (name.length > MAX_NAME) errs.name = `Name must be under ${MAX_NAME} characters.`;
+
+    if (!email) errs.email = "Email is required.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errs.email = "Please enter a valid email.";
+    else if (email.length > MAX_EMAIL) errs.email = `Email must be under ${MAX_EMAIL} characters.`;
+
+    if (!message) errs.message = "Message is required.";
+    else if (message.length > MAX_MESSAGE) errs.message = `Message must be under ${MAX_MESSAGE} characters.`;
+
+    setErrors(errs);
+    return Object.keys(errs).length === 0;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    window.location.href = `mailto:info@crabtreesolutions.com?subject=Inquiry from ${form.name}&body=${encodeURIComponent(form.message)}%0A%0AFrom: ${form.name} (${form.email})`;
+    if (!validate()) return;
+
+    const safeName = form.name.trim().slice(0, MAX_NAME);
+    const safeEmail = form.email.trim().slice(0, MAX_EMAIL);
+    const safeMessage = form.message.trim().slice(0, MAX_MESSAGE);
+
+    window.location.href = `mailto:info@crabtreesolutions.com?subject=${encodeURIComponent(`Inquiry from ${safeName}`)}&body=${encodeURIComponent(safeMessage)}%0A%0AFrom: ${encodeURIComponent(safeName)} (${encodeURIComponent(safeEmail)})`;
   };
 
   return (
@@ -21,39 +52,48 @@ const ContactSection = () => {
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <h3 className="mb-6 text-xl font-semibold text-foreground">Contact Us</h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4" noValidate>
               <div>
                 <label className="mb-1.5 block text-sm font-medium text-foreground">Name</label>
                 <input
                   type="text"
                   required
+                  maxLength={MAX_NAME}
                   value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                  onChange={(e) => { setForm({ ...form, name: e.target.value }); setErrors((p) => ({ ...p, name: undefined })); }}
                   className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                   placeholder="Your name"
                 />
+                {errors.name && <p className="mt-1 text-xs text-destructive">{errors.name}</p>}
               </div>
               <div>
                 <label className="mb-1.5 block text-sm font-medium text-foreground">Email</label>
                 <input
                   type="email"
                   required
+                  maxLength={MAX_EMAIL}
                   value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                  onChange={(e) => { setForm({ ...form, email: e.target.value }); setErrors((p) => ({ ...p, email: undefined })); }}
                   className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                   placeholder="you@company.com"
                 />
+                {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
               </div>
               <div>
                 <label className="mb-1.5 block text-sm font-medium text-foreground">Message</label>
                 <textarea
                   required
                   rows={4}
+                  maxLength={MAX_MESSAGE}
                   value={form.message}
-                  onChange={(e) => setForm({ ...form, message: e.target.value })}
+                  onChange={(e) => { setForm({ ...form, message: e.target.value }); setErrors((p) => ({ ...p, message: undefined })); }}
                   className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
                   placeholder="Tell us about your project..."
                 />
+                <div className="mt-1 flex justify-between">
+                  {errors.message ? <p className="text-xs text-destructive">{errors.message}</p> : <span />}
+                  <span className="text-xs text-muted-foreground">{form.message.length}/{MAX_MESSAGE}</span>
+                </div>
               </div>
               <Button type="submit" size="lg" className="w-full sm:w-auto">Send Message</Button>
             </form>
@@ -71,13 +111,13 @@ const ContactSection = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 shrink-0 text-primary" />
-                <a href="tel:+14697272810" className="text-primary hover:underline">
+                <a href="tel:+14697272810" className="text-primary hover:underline" rel="noopener noreferrer">
                   +1 (469) 727-2810
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 shrink-0 text-primary" />
-                <a href="mailto:info@crabtreesolutions.com" className="text-primary hover:underline">
+                <a href="mailto:info@crabtreesolutions.com" className="text-primary hover:underline" rel="noopener noreferrer">
                   info@crabtreesolutions.com
                 </a>
               </div>
