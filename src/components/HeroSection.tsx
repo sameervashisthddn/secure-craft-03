@@ -8,7 +8,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
           <div className="flex-1">
             <h1 className="mb-6 text-4xl font-extrabold leading-tight text-primary md:text-5xl lg:text-[3.25rem]">
-              We Identify Your IT & Security Gaps First — Then Deliver the Right Solution
+              We Identify Your IT & Security Risks First — Then Deliver the Right Solution
             </h1>
             <p className="mb-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
               Managed IT, Cybersecurity, and Infrastructure Support built around your actual business needs. We assess your environment, identify risks and inefficiencies, and implement reliable, security-focused solutions — without unnecessary product sales.
@@ -22,7 +22,7 @@ const HeroSection = () => {
               </a>
             </div>
             <p className="max-w-md text-xs leading-relaxed text-muted-foreground">
-              Supporting businesses handling sensitive data, compliance requirements, and secure remote access environments.
+              Trusted by businesses handling sensitive data, compliance requirements, and secure remote access environments.
             </p>
           </div>
           <div className="flex-1">
