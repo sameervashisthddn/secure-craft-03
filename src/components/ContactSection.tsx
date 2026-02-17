@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -68,6 +68,12 @@ const ContactSection = () => {
                   <p>11700 Lebanon Rd, Suite 924</p>
                   <p>Frisco, TX 75035</p>
                 </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-5 w-5 shrink-0 text-primary" />
+                <a href="tel:+14697272810" className="text-primary hover:underline">
+                  +1 (469) 727-2810
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 shrink-0 text-primary" />
