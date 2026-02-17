@@ -5,9 +5,9 @@ import logo from "@/assets/logo-new.jpeg";
 
 const navLinks = [
   { label: "Home", href: "#" },
-  { label: "Products", href: "#products" },
+  { label: "What We Do", href: "#what-we-do" },
+  { label: "Our Approach", href: "#approach" },
   { label: "Services", href: "#services" },
-  { label: "Managed IT", href: "#managed-it" },
   { label: "VAPT", href: "#vapt" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
