@@ -8,7 +8,7 @@ const AboutSection = () => {
           <div>
             <h2 className="mb-3 text-3xl font-bold text-primary md:text-4xl">About Crabtree</h2>
             <p className="mb-6 text-muted-foreground leading-relaxed">
-              We partner with healthcare providers, law firms, and small-to-midsize businesses to design, implement, and manage secure IT environments. Our team blends deep expertise with a pragmatic approach to deliver measurable outcomes.
+              We partner with healthcare providers, law firms, staffing agencies, and small-to-midsize businesses to design, implement, and manage secure IT environments. Our team blends deep expertise with a pragmatic approach to deliver measurable outcomes.
             </p>
             <ul className="space-y-3 text-sm text-foreground">
               <li className="flex items-start gap-3"><CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />10+ years serving healthcare, legal, and SMB clients</li>
