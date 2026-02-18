@@ -16,10 +16,10 @@ const StartupTeaser = () => {
           For Startups
         </span>
         <h2 className="text-3xl font-bold text-foreground md:text-4xl">
-          Startup-Friendly IT &amp; Security Services
+          Avoid Costly IT Mistakes — Implement the Right Infrastructure from Day One
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-          Scalable, secure, and cost-effective IT support designed for growing startups. We help you build a strong IT foundation without enterprise overhead.
+          We assess your current needs and implement secure, reliable, and cost-effective IT solutions aligned with your startup's growth stage — ensuring you invest only where it delivers real value.
         </p>
 
         <div className="mx-auto mt-10 flex max-w-xl flex-col items-center gap-4 sm:flex-row sm:justify-center">
