@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { useCallback } from "react";
 import logo from "@/assets/logo-new.jpeg";
 
@@ -116,7 +116,9 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <span className="text-muted-foreground">Privacy Policy</span>
+                <Link to="/privacy-policy" className="text-muted-foreground transition-colors hover:text-primary">
+                  Privacy Policy
+                </Link>
               </li>
             </ul>
           </div>
