@@ -83,7 +83,7 @@ const Footer = () => {
               <li><a href="/startup" className="transition-colors hover:text-primary">Startups</a></li>
               <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">Healthcare</a></li>
               <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">Insurance</a></li>
-              <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">Call Centers</a></li>
+              <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">Contact &amp; Support Centers</a></li>
               <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">Financial Services</a></li>
               <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">SMBs and Enterprises</a></li>
             </ul>
