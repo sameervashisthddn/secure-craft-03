@@ -128,16 +128,19 @@ const StartupServices = () => {
             For Startups
           </span>
           <h1 className="mx-auto max-w-4xl text-4xl font-extrabold leading-tight text-foreground md:text-5xl lg:text-6xl">
-            Startup IT &amp; Security Services
+            Avoid Costly IT Mistakes — Implement the Right Infrastructure from Day One
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Scalable, Secure, and Cost-Effective IT Support for Growing Startups
+            We assess your current needs and implement secure, reliable, and cost-effective IT solutions aligned with your startup's growth stage — ensuring you invest only where it delivers real value.
           </p>
           <a href="#contact-startup" className="mt-8 inline-block">
             <Button size="lg" className="text-base px-8 py-6">
-              Schedule a Startup IT Assessment
+              Schedule Startup IT Assessment
             </Button>
           </a>
+          <p className="mt-4 text-sm font-medium text-muted-foreground">
+            Startup-friendly, scalable IT and security designed for growing teams.
+          </p>
         </div>
       </section>
 
