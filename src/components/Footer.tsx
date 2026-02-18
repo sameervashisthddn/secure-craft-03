@@ -1,9 +1,27 @@
+import { useLocation, useNavigate } from "react-router-dom";
+import { useCallback } from "react";
 import logo from "@/assets/logo-new.jpeg";
 
 const Footer = () => {
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavClick = useCallback(
+    (e: React.MouseEvent, hash: string) => {
+      e.preventDefault();
+      if (location.pathname === "/") {
+        const el = document.querySelector(hash);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      } else {
+        navigate("/");
+        setTimeout(() => {
+          const el = document.querySelector(hash);
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    },
+    [location.pathname, navigate]
+  );
 
   return (
     <footer className="border-t border-border bg-card">
@@ -47,12 +65,12 @@ const Footer = () => {
               Solutions
             </h4>
             <ul className="space-y-2.5 text-sm leading-relaxed text-muted-foreground">
-              <li>Managed IT Services</li>
-              <li>Enterprise VPN Services</li>
-              <li>Startup IT Services</li>
-              <li>Infrastructure Audit &amp; Optimization</li>
-              <li>Endpoint Security</li>
-              <li>Firewall &amp; Network Security</li>
+              <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="transition-colors hover:text-primary">Managed IT Services</a></li>
+              <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="transition-colors hover:text-primary">Enterprise VPN Services</a></li>
+              <li><a href="/startup" className="transition-colors hover:text-primary">Startup IT Services</a></li>
+              <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="transition-colors hover:text-primary">Infrastructure Audit &amp; Optimization</a></li>
+              <li><a href="/#vapt" onClick={(e) => handleNavClick(e, "#vapt")} className="transition-colors hover:text-primary">Endpoint Security</a></li>
+              <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="transition-colors hover:text-primary">Firewall &amp; Network Security</a></li>
             </ul>
           </div>
 
@@ -62,12 +80,12 @@ const Footer = () => {
               Industries
             </h4>
             <ul className="space-y-2.5 text-sm leading-relaxed text-muted-foreground">
-              <li>Startups</li>
-              <li>Healthcare</li>
-              <li>Insurance</li>
-              <li>Call Centers</li>
-              <li>Financial Services</li>
-              <li>SMBs and Enterprises</li>
+              <li><a href="/startup" className="transition-colors hover:text-primary">Startups</a></li>
+              <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">Healthcare</a></li>
+              <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">Insurance</a></li>
+              <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">Call Centers</a></li>
+              <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">Financial Services</a></li>
+              <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">SMBs and Enterprises</a></li>
             </ul>
           </div>
 
@@ -78,24 +96,24 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <button onClick={() => scrollTo("about")} className="text-muted-foreground transition-colors hover:text-primary">
+                <a href="/#about" onClick={(e) => handleNavClick(e, "#about")} className="text-muted-foreground transition-colors hover:text-primary">
                   About Us
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => scrollTo("services")} className="text-muted-foreground transition-colors hover:text-primary">
+                <a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="text-muted-foreground transition-colors hover:text-primary">
                   Services
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => scrollTo("contact")} className="text-muted-foreground transition-colors hover:text-primary">
+                <a href="/#contact" onClick={(e) => handleNavClick(e, "#contact")} className="text-muted-foreground transition-colors hover:text-primary">
                   Contact
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => scrollTo("contact")} className="text-muted-foreground transition-colors hover:text-primary">
+                <a href="/#contact" onClick={(e) => handleNavClick(e, "#contact")} className="text-muted-foreground transition-colors hover:text-primary">
                   Schedule Consultation
-                </button>
+                </a>
               </li>
               <li>
                 <span className="text-muted-foreground">Privacy Policy</span>
