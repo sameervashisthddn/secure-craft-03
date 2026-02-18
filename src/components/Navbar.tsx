@@ -47,11 +47,8 @@ const Navbar = () => {
         <Link
           key={l.label}
           to={l.href}
-          onClick={(e) => {
-            if (location.pathname === "/") {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "instant" });
             onClick?.();
           }}
           className="text-sm font-medium text-foreground transition-colors hover:text-primary"
@@ -90,18 +87,15 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <a
-          href="/"
-          onClick={(e) => {
-            if (location.pathname === "/") {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }
+        <Link
+          to="/"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "instant" });
           }}
           className="flex items-center gap-2"
         >
           <img src={logo} alt="Crabtree Solutions Inc." className="h-48" />
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-6 lg:flex">
           {navLinks.map((l) => renderLink(l))}
