@@ -42,7 +42,25 @@ const Navbar = () => {
   );
 
   const renderLink = (l: { label: string; href: string }, onClick?: () => void) => {
-    if (l.href === "/" || l.href === "/startup") {
+    if (l.href === "/") {
+      return (
+        <Link
+          key={l.label}
+          to={l.href}
+          onClick={(e) => {
+            if (location.pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+            onClick?.();
+          }}
+          className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+        >
+          {l.label}
+        </Link>
+      );
+    }
+    if (l.href === "/startup") {
       return (
         <Link
           key={l.label}
