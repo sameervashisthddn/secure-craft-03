@@ -90,9 +90,18 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <Link to="/" className="flex items-center gap-2">
+        <a
+          href="/"
+          onClick={(e) => {
+            if (location.pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+          className="flex items-center gap-2"
+        >
           <img src={logo} alt="Crabtree Solutions Inc." className="h-48" />
-        </Link>
+        </a>
 
         <div className="hidden items-center gap-6 lg:flex">
           {navLinks.map((l) => renderLink(l))}
