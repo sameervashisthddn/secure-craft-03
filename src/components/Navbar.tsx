@@ -27,7 +27,7 @@ const Navbar = () => {
 
         <div className="hidden items-center gap-6 lg:flex">
           {navLinks.map((l) =>
-            l.href.startsWith("/") && !l.href.includes("#") ? (
+            l.href === "/startup" ? (
               <Link
                 key={l.label}
                 to={l.href}
@@ -45,9 +45,9 @@ const Navbar = () => {
               </a>
             )
           )}
-          <Link to="/#contact">
+          <a href="/#contact">
             <Button size="sm" className="ml-2">Get a Free Quote</Button>
-          </Link>
+          </a>
         </div>
 
         <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)}>
@@ -59,7 +59,7 @@ const Navbar = () => {
         <div className="border-t border-border bg-background lg:hidden">
           <div className="flex flex-col gap-3 px-6 py-4">
             {navLinks.map((l) =>
-              l.href.startsWith("/") && !l.href.includes("#") ? (
+              l.href === "/startup" ? (
                 <Link
                   key={l.label}
                   to={l.href}
@@ -79,9 +79,9 @@ const Navbar = () => {
                 </a>
               )
             )}
-            <Link to="/#contact" onClick={() => setOpen(false)}>
+            <a href="/#contact" onClick={() => setOpen(false)}>
               <Button className="w-full mt-2">Get a Free Quote</Button>
-            </Link>
+            </a>
           </div>
         </div>
       )}
