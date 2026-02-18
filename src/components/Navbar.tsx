@@ -94,7 +94,7 @@ const Navbar = () => {
           }}
           className="flex items-center gap-2"
         >
-          <img src={logo} alt="Crabtree Solutions Inc." className="h-28" />
+          <img src={logo} alt="Crabtree Solutions Inc." className="h-40" />
         </Link>
 
         <div className="hidden items-center gap-6 lg:flex">
