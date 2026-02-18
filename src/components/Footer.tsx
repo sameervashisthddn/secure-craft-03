@@ -27,7 +27,7 @@ const Footer = () => {
               </p>
               <div>
                 <p className="font-medium text-foreground">Crabtree Solutions Inc.</p>
-                <p>Secure IT &amp; Cybersecurity Services</p>
+                <p>Secure Managed IT &amp; Cybersecurity Services</p>
               </div>
             </div>
           </div>
