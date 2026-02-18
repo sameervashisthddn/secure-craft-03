@@ -13,6 +13,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
+import StartupTeaser from "@/components/StartupTeaser";
 
 const Index = () => {
   return (
@@ -39,6 +40,9 @@ const Index = () => {
       </ScrollReveal>
       <ScrollReveal>
         <FinalCTASection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <StartupTeaser />
       </ScrollReveal>
       <ScrollReveal>
         <VAPTSection />

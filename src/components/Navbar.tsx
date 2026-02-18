@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo-new.jpeg";
 
 const navLinks = [
-  { label: "Home", href: "#" },
-  { label: "What We Do", href: "#what-we-do" },
-  { label: "Our Approach", href: "#approach" },
-  { label: "Services", href: "#services" },
-  { label: "VAPT", href: "#vapt" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "What We Do", href: "/#what-we-do" },
+  { label: "Our Approach", href: "/#approach" },
+  { label: "Services", href: "/#services" },
+  { label: "VAPT", href: "/#vapt" },
+  { label: "Startup IT", href: "/startup" },
+  { label: "About", href: "/#about" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -19,23 +21,33 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="Crabtree Solutions Inc." className="h-48" />
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-6 lg:flex">
-          {navLinks.map((l) => (
-            <a
-              key={l.href + l.label}
-              href={l.href}
-              className="text-sm font-medium text-foreground transition-colors hover:text-primary"
-            >
-              {l.label}
-            </a>
-          ))}
-          <a href="#contact">
+          {navLinks.map((l) =>
+            l.href.startsWith("/") && !l.href.includes("#") ? (
+              <Link
+                key={l.label}
+                to={l.href}
+                className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+              >
+                {l.label}
+              </Link>
+            ) : (
+              <a
+                key={l.label}
+                href={l.href}
+                className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+              >
+                {l.label}
+              </a>
+            )
+          )}
+          <Link to="/#contact">
             <Button size="sm" className="ml-2">Get a Free Quote</Button>
-          </a>
+          </Link>
         </div>
 
         <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)}>
@@ -46,19 +58,30 @@ const Navbar = () => {
       {open && (
         <div className="border-t border-border bg-background lg:hidden">
           <div className="flex flex-col gap-3 px-6 py-4">
-            {navLinks.map((l) => (
-              <a
-                key={l.href + l.label}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="text-sm font-medium text-foreground hover:text-primary"
-              >
-                {l.label}
-              </a>
-            ))}
-            <a href="#contact" onClick={() => setOpen(false)}>
+            {navLinks.map((l) =>
+              l.href.startsWith("/") && !l.href.includes("#") ? (
+                <Link
+                  key={l.label}
+                  to={l.href}
+                  onClick={() => setOpen(false)}
+                  className="text-sm font-medium text-foreground hover:text-primary"
+                >
+                  {l.label}
+                </Link>
+              ) : (
+                <a
+                  key={l.label}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="text-sm font-medium text-foreground hover:text-primary"
+                >
+                  {l.label}
+                </a>
+              )
+            )}
+            <Link to="/#contact" onClick={() => setOpen(false)}>
               <Button className="w-full mt-2">Get a Free Quote</Button>
-            </a>
+            </Link>
           </div>
         </div>
       )}
