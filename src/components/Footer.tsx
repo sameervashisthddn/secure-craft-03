@@ -46,10 +46,10 @@ const Footer = () => {
               <p>
                 Email:{" "}
                 <a
-                  href="mailto:info@crabtreesolutions.com"
+                  href="mailto:info@crabtreesolutions.us"
                   className="text-primary hover:underline"
                 >
-                  info@crabtreesolutions.com
+                  info@crabtreesolutions.us
                 </a>
               </p>
               <div>
