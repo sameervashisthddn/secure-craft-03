@@ -112,8 +112,8 @@ async function prerender() {
     });
 
     // Allow animations/lazy content to finish
-    await page.waitForTimeout(1000);
-
+    //await page.waitForTimeout(1000);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     const html = await page.content();
 
     const filePath =
