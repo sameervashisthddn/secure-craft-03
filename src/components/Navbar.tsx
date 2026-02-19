@@ -130,7 +130,7 @@ const Navbar = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
           className="flex items-center gap-2"
         >
-          <img src={logo} alt="Crabtree Solutions Inc." className="h-40" />
+          <img src={logo} alt="Crabtree Solutions Inc." className="h-16 rounded-md" />
         </Link>
 
         {/* Desktop nav */}
