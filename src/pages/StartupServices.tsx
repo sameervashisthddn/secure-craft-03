@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -117,6 +118,14 @@ const services = [
 const StartupServices = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>IT Services for Startups – Crabtree Solutions Inc.</title>
+        <meta name="description" content="Affordable, scalable IT infrastructure and cybersecurity services built for startups and growing businesses." />
+        <link rel="canonical" href="https://crabtreesolutions.us/startup" />
+        <meta property="og:title" content="IT Services for Startups – Crabtree Solutions Inc." />
+        <meta property="og:description" content="Affordable, scalable IT infrastructure and cybersecurity services built for startups and growing businesses." />
+        <meta property="og:url" content="https://crabtreesolutions.us/startup" />
+      </Helmet>
       <Navbar />
 
       {/* Hero */}
