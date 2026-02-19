@@ -3,6 +3,7 @@
  * Launches Puppeteer, visits each route on a local static server,
  * and writes the fully-rendered HTML back into dist/.
  */
+import { statSync } from 'fs'; 
 import { launch } from 'puppeteer';
 import { createServer } from 'http';
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
@@ -42,16 +43,28 @@ async function startServer() {
       filePath = join(filePath, 'index.html');
     }
 
+ //   try {
+//    const content = readFileSync(filePath);
+//      const ext = extname(filePath);
+//      res.writeHead(200, { 'Content-Type': MIME_TYPES[ext] || 'application/octet-stream' });
+//      res.end(content);
+//    } catch {
+//      const fallback = readFileSync(join(DIST, 'index.html'));
+ //     res.writeHead(200, { 'Content-Type': 'text/html' });
+//      res.end(fallback);
+  //  }
+
     try {
-      const content = readFileSync(filePath);
-      const ext = extname(filePath);
-      res.writeHead(200, { 'Content-Type': MIME_TYPES[ext] || 'application/octet-stream' });
-      res.end(content);
-    } catch {
-      const fallback = readFileSync(join(DIST, 'index.html'));
-      res.writeHead(200, { 'Content-Type': 'text/html' });
-      res.end(fallback);
-    }
+  const stat = statSync(filePath);
+
+  if (stat.isDirectory()) {
+    const indexPath = join(filePath, 'index.html');
+    filePath = existsSync(indexPath) ? indexPath : join(DIST, 'index.html');
+  }
+} catch {
+  // If file doesn't exist, fallback to SPA index.html
+  filePath = join(DIST, 'index.html');
+}
   });
   await new Promise((resolve) => server.listen(PORT, resolve));
   return server;
