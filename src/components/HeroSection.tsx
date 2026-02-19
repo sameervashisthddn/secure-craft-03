@@ -54,11 +54,11 @@ const HeroSection = () => {
             </span>
 
             <h1 className="mb-4 text-4xl font-extrabold leading-tight text-foreground md:text-5xl lg:text-[3.25rem]">
-              Assessment-First IT &amp; Security
+              Managed IT & Cybersecurity — Built for Compliance
             </h1>
             <p className="mb-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              Protect your business with compliance-driven IT solutions. We
-              identify risks first — then deliver the right solution.
+              We assess your infrastructure first, then deliver secure, reliable,
+              and cost-effective IT solutions tailored to your business.
             </p>
 
             {/* Secondary CTA */}
