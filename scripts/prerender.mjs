@@ -8,20 +8,38 @@ import { createServer } from 'http';
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import handler from 'serve-handler';
+import { extname } from 'path';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const DIST = join(__dirname, '..', 'dist');
-const PORT = 4173;
-
-const ROUTES = ['/', '/startup', '/privacy-policy', '/industries/healthcare', '/industries/legal', '/industries/staffing', '/industries/smb'];
+const MIME_TYPES = {
+  '.html': 'text/html', '.js': 'application/javascript', '.css': 'text/css',
+  '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml', '.ico': 'image/x-icon',
+  '.woff': 'font/woff', '.woff2': 'font/woff2',
+};
 
 async function startServer() {
   const server = createServer((req, res) => {
-    return handler(req, res, {
-      public: DIST,
-      rewrites: [{ source: '**', destination: '/index.html' }],
-    });
+    const url = new URL(req.url, `http://localhost:${PORT}`);
+    let filePath = join(DIST, url.pathname);
+
+    // Try the exact file, then index.html in that dir, then SPA fallback
+    if (!existsSync(filePath) || !readFileSync(filePath)) {
+      const indexPath = join(filePath, 'index.html');
+      filePath = existsSync(indexPath) ? indexPath : join(DIST, 'index.html');
+    } else if (existsSync(filePath) && filePath.endsWith('/')) {
+      filePath = join(filePath, 'index.html');
+    }
+
+    try {
+      const content = readFileSync(filePath);
+      const ext = extname(filePath);
+      res.writeHead(200, { 'Content-Type': MIME_TYPES[ext] || 'application/octet-stream' });
+      res.end(content);
+    } catch {
+      const fallback = readFileSync(join(DIST, 'index.html'));
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end(fallback);
+    }
   });
   await new Promise((resolve) => server.listen(PORT, resolve));
   return server;
