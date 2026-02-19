@@ -67,7 +67,7 @@ const Footer = () => {
             <ul className="space-y-2.5 text-sm leading-relaxed text-muted-foreground">
               <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="transition-colors hover:text-primary">Managed IT Services</a></li>
               <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="transition-colors hover:text-primary">Enterprise VPN Services</a></li>
-              <li><a href="/startup" className="transition-colors hover:text-primary">Startup IT Services</a></li>
+              <li><Link to="/startup" className="transition-colors hover:text-primary">Startup IT Services</Link></li>
               <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="transition-colors hover:text-primary">Infrastructure Audit &amp; Optimization</a></li>
               <li><a href="/#vapt" onClick={(e) => handleNavClick(e, "#vapt")} className="transition-colors hover:text-primary">Endpoint Security</a></li>
               <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="transition-colors hover:text-primary">Firewall &amp; Network Security</a></li>
@@ -80,12 +80,11 @@ const Footer = () => {
               Industries
             </h4>
             <ul className="space-y-2.5 text-sm leading-relaxed text-muted-foreground">
-              <li><a href="/startup" className="transition-colors hover:text-primary">Startups</a></li>
-              <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">Healthcare</a></li>
-              <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">Insurance</a></li>
-              <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">Contact &amp; Support Centers</a></li>
-              <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">Financial Services</a></li>
-              <li><a href="/#what-we-do" onClick={(e) => handleNavClick(e, "#what-we-do")} className="transition-colors hover:text-primary">SMBs and Enterprises</a></li>
+              <li><Link to="/startup" className="transition-colors hover:text-primary">Startups</Link></li>
+              <li><Link to="/industries/healthcare" className="transition-colors hover:text-primary">Healthcare</Link></li>
+              <li><Link to="/industries/legal" className="transition-colors hover:text-primary">Legal</Link></li>
+              <li><Link to="/industries/staffing" className="transition-colors hover:text-primary">Staffing Agencies</Link></li>
+              <li><Link to="/industries/smb" className="transition-colors hover:text-primary">Small &amp; Midsize Business</Link></li>
             </ul>
           </div>
 
