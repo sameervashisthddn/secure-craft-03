@@ -1,9 +1,18 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Privacy Policy – Crabtree Solutions Inc.</title>
+        <meta name="description" content="Read our privacy policy to understand how Crabtree Solutions Inc. collects, uses, and protects your personal information." />
+        <link rel="canonical" href="https://crabtreesolutions.us/privacy-policy" />
+        <meta property="og:title" content="Privacy Policy – Crabtree Solutions Inc." />
+        <meta property="og:description" content="Privacy policy for Crabtree Solutions Inc. managed IT and cybersecurity services." />
+        <meta property="og:url" content="https://crabtreesolutions.us/privacy-policy" />
+      </Helmet>
       <Navbar />
       <main className="container mx-auto px-6 py-16 max-w-4xl">
         <h1 className="text-3xl font-bold text-foreground mb-8">Privacy Policy</h1>
