@@ -4,8 +4,10 @@ import HeroSection from "@/components/HeroSection";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
 import OurApproachSection from "@/components/OurApproachSection";
 import CoreServicesSection from "@/components/CoreServicesSection";
+import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import TechWeSupport from "@/components/TechWeSupport";
 import WhoWeHelpSection from "@/components/WhoWeHelpSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import OutcomesSection from "@/components/OutcomesSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import VAPTSection from "@/components/VAPTSection";
@@ -40,10 +42,16 @@ const Index = () => {
         <CoreServicesSection />
       </ScrollReveal>
       <ScrollReveal>
+        <WhyChooseUsSection />
+      </ScrollReveal>
+      <ScrollReveal>
         <TechWeSupport />
       </ScrollReveal>
       <ScrollReveal>
         <WhoWeHelpSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <TestimonialsSection />
       </ScrollReveal>
       <ScrollReveal>
         <OutcomesSection />
