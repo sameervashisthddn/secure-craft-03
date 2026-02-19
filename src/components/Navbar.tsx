@@ -64,44 +64,22 @@ const Navbar = () => {
     [location.pathname, navigate]
   );
 
-  const isHashLink = (href: string) => href.startsWith("/#");
   const isRouteLink = (href: string) => !href.startsWith("/#") && href !== "/";
 
   const renderNavLink = (l: { label: string; href: string }, onClick?: () => void) => {
+    const cls = "text-sm font-medium text-foreground/80 transition-colors hover:text-primary whitespace-nowrap";
     if (l.href === "/") {
       return (
-        <Link
-          to="/"
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: "instant" });
-            onClick?.();
-          }}
-          className="text-sm font-medium text-foreground transition-colors hover:text-primary"
-        >
+        <Link to="/" onClick={() => { window.scrollTo({ top: 0, behavior: "instant" }); onClick?.(); }} className={cls}>
           {l.label}
         </Link>
       );
     }
     if (isRouteLink(l.href)) {
-      return (
-        <Link
-          to={l.href}
-          onClick={onClick}
-          className="text-sm font-medium text-foreground transition-colors hover:text-primary"
-        >
-          {l.label}
-        </Link>
-      );
+      return <Link to={l.href} onClick={onClick} className={cls}>{l.label}</Link>;
     }
     return (
-      <a
-        href={l.href}
-        onClick={(e) => {
-          handleHashClick(e, l.href);
-          onClick?.();
-        }}
-        className="text-sm font-medium text-foreground transition-colors hover:text-primary"
-      >
+      <a href={l.href} onClick={(e) => { handleHashClick(e, l.href); onClick?.(); }} className={cls}>
         {l.label}
       </a>
     );
@@ -117,25 +95,24 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    return () => {
-      if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
-    };
+    return () => { if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current); };
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border bg-background">
-      <div className="container mx-auto grid grid-cols-3 items-center px-6 py-4">
-        {/* Logo — left */}
+    <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
+      <div className="container mx-auto flex h-16 items-center justify-between gap-8 px-6">
+
+        {/* Logo */}
         <Link
           to="/"
           onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
-          className="flex items-center gap-2 justify-self-start"
+          className="flex shrink-0 items-center"
         >
-          <img src={logo} alt="Crabtree Solutions Inc." className="h-40" />
+          <img src={logo} alt="Crabtree Solutions Inc." className="h-10 w-auto object-contain" />
         </Link>
 
-        {/* Desktop nav — center */}
-        <div className="hidden items-center justify-center gap-6 lg:flex">
+        {/* Desktop nav — centered */}
+        <div className="hidden flex-1 items-center justify-center gap-1 lg:flex">
           {navLinks.map((l) =>
             l.children ? (
               <div
@@ -144,30 +121,27 @@ const Navbar = () => {
                 onMouseEnter={() => openDropdown(l.label)}
                 onMouseLeave={closeDropdown}
               >
-                <button className="flex items-center gap-1 text-sm font-medium text-foreground transition-colors hover:text-primary">
+                <button className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-accent hover:text-primary whitespace-nowrap">
                   {l.label}
-                  <ChevronDown className="h-3.5 w-3.5" />
+                  <ChevronDown className="h-3.5 w-3.5 opacity-60" />
                 </button>
                 {dropdown === l.label && (
-                  <div className="absolute left-0 top-full z-50 mt-2 w-56 rounded-lg border border-border bg-popover p-1.5 shadow-lg">
+                  <div className="absolute left-1/2 top-full z-50 mt-1 w-52 -translate-x-1/2 rounded-xl border border-border bg-popover p-1.5 shadow-xl">
                     {l.children.map((child) => (
                       <div key={child.label}>
                         {isRouteLink(child.href) ? (
                           <Link
                             to={child.href}
                             onClick={() => setDropdown(null)}
-                            className="block rounded-md px-3 py-2 text-sm text-popover-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+                            className="block rounded-lg px-3 py-2 text-sm text-popover-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
                           >
                             {child.label}
                           </Link>
                         ) : (
                           <a
                             href={child.href}
-                            onClick={(e) => {
-                              handleHashClick(e, child.href);
-                              setDropdown(null);
-                            }}
-                            className="block rounded-md px-3 py-2 text-sm text-popover-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+                            onClick={(e) => { handleHashClick(e, child.href); setDropdown(null); }}
+                            className="block rounded-lg px-3 py-2 text-sm text-popover-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
                           >
                             {child.label}
                           </a>
@@ -178,20 +152,24 @@ const Navbar = () => {
                 )}
               </div>
             ) : (
-              <div key={l.label}>{renderNavLink(l)}</div>
+              <div key={l.label} className="rounded-md px-3 py-2">
+                {renderNavLink(l)}
+              </div>
             )
           )}
         </div>
 
-        {/* CTA — right (desktop) / hamburger (mobile) */}
-        <div className="flex items-center justify-end gap-3">
-          <a href="/#contact" onClick={(e) => handleHashClick(e, "/#contact")} className="hidden lg:block">
-            <Button size="sm">Get a Free Quote</Button>
+        {/* CTA — right */}
+        <div className="hidden shrink-0 lg:block">
+          <a href="/#contact" onClick={(e) => handleHashClick(e, "/#contact")}>
+            <Button size="sm" className="whitespace-nowrap">Get a Free Quote</Button>
           </a>
-          <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)}>
-            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
         </div>
+
+        {/* Hamburger — mobile */}
+        <button className="ml-auto lg:hidden text-foreground" onClick={() => setOpen(!open)}>
+          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
       </div>
 
       {/* Mobile nav */}
@@ -203,31 +181,28 @@ const Navbar = () => {
                 <div key={l.label}>
                   <button
                     onClick={() => setMobileExpanded(mobileExpanded === l.label ? null : l.label)}
-                    className="flex w-full items-center justify-between py-2 text-sm font-medium text-foreground"
+                    className="flex w-full items-center justify-between rounded-md px-2 py-2.5 text-sm font-medium text-foreground hover:bg-accent"
                   >
                     {l.label}
-                    <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpanded === l.label ? "rotate-180" : ""}`} />
+                    <ChevronDown className={`h-4 w-4 opacity-60 transition-transform ${mobileExpanded === l.label ? "rotate-180" : ""}`} />
                   </button>
                   {mobileExpanded === l.label && (
-                    <div className="ml-4 flex flex-col gap-1 border-l border-border pl-3">
+                    <div className="ml-4 flex flex-col gap-0.5 border-l border-border pl-3 pb-1">
                       {l.children.map((child) => (
                         <div key={child.label}>
                           {isRouteLink(child.href) ? (
                             <Link
                               to={child.href}
                               onClick={() => setOpen(false)}
-                              className="block py-1.5 text-sm text-muted-foreground hover:text-primary"
+                              className="block rounded-md px-2 py-2 text-sm text-muted-foreground hover:text-primary"
                             >
                               {child.label}
                             </Link>
                           ) : (
                             <a
                               href={child.href}
-                              onClick={(e) => {
-                                handleHashClick(e, child.href);
-                                setOpen(false);
-                              }}
-                              className="block py-1.5 text-sm text-muted-foreground hover:text-primary"
+                              onClick={(e) => { handleHashClick(e, child.href); setOpen(false); }}
+                              className="block rounded-md px-2 py-2 text-sm text-muted-foreground hover:text-primary"
                             >
                               {child.label}
                             </a>
@@ -238,19 +213,17 @@ const Navbar = () => {
                   )}
                 </div>
               ) : (
-                <div key={l.label} className="py-2">
+                <div key={l.label} className="rounded-md px-2">
                   {renderNavLink(l, () => setOpen(false))}
                 </div>
               )
             )}
             <a
               href="/#contact"
-              onClick={(e) => {
-                handleHashClick(e, "/#contact");
-                setOpen(false);
-              }}
+              onClick={(e) => { handleHashClick(e, "/#contact"); setOpen(false); }}
+              className="mt-2"
             >
-              <Button className="w-full mt-2">Get a Free Quote</Button>
+              <Button className="w-full">Get a Free Quote</Button>
             </a>
           </div>
         </div>
