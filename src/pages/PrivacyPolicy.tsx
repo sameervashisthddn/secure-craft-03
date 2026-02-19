@@ -83,8 +83,8 @@ const PrivacyPolicy = () => {
             <h2 className="text-lg font-semibold text-foreground mb-3">7. Contact Us</h2>
             <p>
               If you have any questions about this Privacy Policy, please contact us at:{" "}
-              <a href="mailto:info@crabtreesolutions.com" className="text-primary hover:underline">
-                info@crabtreesolutions.com
+              <a href="mailto:info@crabtreesolutions.us" className="text-primary hover:underline">
+                info@crabtreesolutions.us
               </a>
             </p>
           </section>
