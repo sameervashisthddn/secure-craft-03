@@ -6,9 +6,21 @@
 import { launch } from 'puppeteer';
 import { createServer } from 'http';
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
-import { join, dirname } from 'path';
+import { join, dirname, extname } from 'path';
 import { fileURLToPath } from 'url';
-import { extname } from 'path';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const DIST = join(__dirname, '..', 'dist');
+const PORT = 4173;
+const ROUTES = [
+  '/',
+  '/startup',
+  '/privacy-policy',
+  '/industries/healthcare',
+  '/industries/legal',
+  '/industries/staffing',
+  '/industries/smb',
+];
 
 const MIME_TYPES = {
   '.html': 'text/html', '.js': 'application/javascript', '.css': 'text/css',
