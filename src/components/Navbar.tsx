@@ -124,17 +124,18 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background">
-      <div className="container mx-auto flex items-center justify-between px-6 py-4">
+      <div className="container mx-auto grid grid-cols-3 items-center px-6 py-4">
+        {/* Logo — left */}
         <Link
           to="/"
           onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 justify-self-start"
         >
           <img src={logo} alt="Crabtree Solutions Inc." className="h-40" />
         </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden items-center gap-6 lg:flex">
+        {/* Desktop nav — center */}
+        <div className="hidden items-center justify-center gap-6 lg:flex">
           {navLinks.map((l) =>
             l.children ? (
               <div
@@ -180,14 +181,17 @@ const Navbar = () => {
               <div key={l.label}>{renderNavLink(l)}</div>
             )
           )}
-          <a href="/#contact" onClick={(e) => handleHashClick(e, "/#contact")}>
-            <Button size="sm" className="ml-2">Get a Free Quote</Button>
-          </a>
         </div>
 
-        <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)}>
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        {/* CTA — right (desktop) / hamburger (mobile) */}
+        <div className="flex items-center justify-end gap-3">
+          <a href="/#contact" onClick={(e) => handleHashClick(e, "/#contact")} className="hidden lg:block">
+            <Button size="sm">Get a Free Quote</Button>
+          </a>
+          <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)}>
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile nav */}
