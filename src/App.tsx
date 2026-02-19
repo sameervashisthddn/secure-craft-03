@@ -8,6 +8,10 @@ import Index from "./pages/Index";
 import StartupServices from "./pages/StartupServices";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import HealthcarePage from "./pages/industries/Healthcare";
+import LegalPage from "./pages/industries/Legal";
+import StaffingPage from "./pages/industries/Staffing";
+import SMBPage from "./pages/industries/SMB";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -24,6 +28,10 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/startup" element={<StartupServices />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/industries/healthcare" element={<HealthcarePage />} />
+            <Route path="/industries/legal" element={<LegalPage />} />
+            <Route path="/industries/staffing" element={<StaffingPage />} />
+            <Route path="/industries/smb" element={<SMBPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
