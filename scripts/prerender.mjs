@@ -14,7 +14,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = join(__dirname, '..', 'dist');
 const PORT = 4173;
 
-const ROUTES = ['/', '/startup', '/privacy-policy'];
+const ROUTES = ['/', '/startup', '/privacy-policy', '/industries/healthcare', '/industries/legal', '/industries/staffing', '/industries/smb'];
 
 async function startServer() {
   const server = createServer((req, res) => {

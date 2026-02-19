@@ -11,6 +11,25 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://crabtreesolutions.us/industries/healthcare</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://crabtreesolutions.us/industries/legal</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://crabtreesolutions.us/industries/staffing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://crabtreesolutions.us/industries/smb</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  <url>
     <loc>https://crabtreesolutions.us/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
