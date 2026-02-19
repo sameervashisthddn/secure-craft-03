@@ -88,7 +88,7 @@ const ContactSection = () => {
                   value={form.message}
                   onChange={(e) => { setForm({ ...form, message: e.target.value }); setErrors((p) => ({ ...p, message: undefined })); }}
                   className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                  placeholder="Tell us about your project..."
+                  placeholder="Tell us about your IT challenges or how we can help..."
                 />
                 <div className="mt-1 flex justify-between">
                   {errors.message ? <p className="text-xs text-destructive">{errors.message}</p> : <span />}
