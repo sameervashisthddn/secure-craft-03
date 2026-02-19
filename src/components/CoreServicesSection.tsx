@@ -1,30 +1,36 @@
 import { Server, ShieldCheck, Globe, ClipboardCheck, Lock } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
     icon: Server,
-    title: "Managed IT & Infrastructure — Built for Security, Stability, and Reliability",
-    text: "Ongoing management of servers, endpoints, networks, and cloud infrastructure to ensure stability and reliability.",
+    title: "Managed IT",
+    text: "Reliable IT support tailored for SMBs.",
+    cta: "Schedule Consultation",
   },
   {
     icon: ShieldCheck,
-    title: "Cybersecurity and Endpoint Protection",
-    text: "Protect systems from unauthorized access, malware, and security threats using enterprise-grade security tools and monitoring.",
+    title: "Cybersecurity",
+    text: "Compliance-first protection for HIPAA, SOC 2, PCI DSS.",
+    cta: "Talk to an Expert",
   },
   {
     icon: Globe,
-    title: "Firewall and Network Security",
-    text: "Secure network infrastructure, remote access systems, and firewall configurations to prevent unauthorized access.",
+    title: "VAPT",
+    text: "Identify vulnerabilities before attackers do.",
+    cta: "Request Assessment",
   },
   {
     icon: ClipboardCheck,
-    title: "Infrastructure Audit and Optimization",
-    text: "Assess your IT environment to identify risks, inefficiencies, and unnecessary infrastructure costs.",
+    title: "Startup IT",
+    text: "Scalable IT setups for growing startups.",
+    cta: "Get Started",
   },
   {
     icon: Lock,
-    title: "Secure Remote Access and VPN Management",
-    text: "Implement controlled, secure remote access solutions aligned with security and compliance requirements.",
+    title: "Secure Remote Access & VPN",
+    text: "Controlled, secure remote access aligned with compliance requirements.",
+    cta: "Learn More",
   },
 ];
 
@@ -32,18 +38,30 @@ const CoreServicesSection = () => {
   return (
     <section id="services" className="section-padding section-alt">
       <div className="container mx-auto px-6">
-        <h2 className="mb-10 text-3xl font-bold text-primary md:text-4xl">
-          Core Services
+        <h2 className="mb-2 text-3xl font-bold text-primary md:text-4xl">
+          Our Services
         </h2>
+        <p className="mb-10 max-w-lg text-muted-foreground">
+          Cybersecurity Services in Texas — built for compliance and reliability.
+        </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
             <div
               key={s.title}
-              className="rounded-xl border border-border bg-background p-6 transition-shadow hover:shadow-md"
+              className="flex flex-col rounded-xl border border-border bg-background p-6 transition-shadow hover:shadow-md"
             >
               <s.icon className="mb-4 h-8 w-8 text-primary" />
-              <h3 className="mb-3 text-lg font-semibold text-foreground">{s.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+              <h3 className="mb-3 text-lg font-semibold text-foreground">
+                {s.title}
+              </h3>
+              <p className="mb-6 flex-1 text-sm leading-relaxed text-muted-foreground">
+                {s.text}
+              </p>
+              <a href="#contact">
+                <Button variant="outline" size="sm" className="w-full">
+                  {s.cta}
+                </Button>
+              </a>
             </div>
           ))}
         </div>
