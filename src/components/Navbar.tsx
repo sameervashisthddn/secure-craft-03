@@ -2,7 +2,7 @@ import { useState, useCallback, useRef, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import logo from "@/assets/logo-new.jpeg";
+import logo from "@/assets/logo-tree.png";
 
 interface NavItem {
   label: string;
@@ -130,7 +130,10 @@ const Navbar = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
           className="flex items-center gap-2"
         >
-          <img src={logo} alt="Crabtree Solutions Inc." className="h-40" />
+          <img src={logo} alt="Crabtree Solutions Inc." className="h-14 w-auto" />
+          <span className="hidden sm:block text-base font-semibold text-foreground leading-tight">
+            Crabtree<br /><span className="text-primary text-xs font-medium tracking-wide">Solutions Inc.</span>
+          </span>
         </Link>
 
         {/* Desktop nav */}
