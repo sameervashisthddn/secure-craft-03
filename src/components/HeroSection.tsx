@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Shield, ArrowRight } from "lucide-react";
+import { Shield, ArrowRight, MapPin } from "lucide-react";
 import heroImg from "@/assets/hero-services.jpg";
 
 const MAX_NAME = 100;
@@ -61,13 +61,25 @@ const HeroSection = () => {
               identify risks first — then deliver the right solution.
             </p>
 
+            {/* Secondary CTA */}
+            <a
+              href="#services"
+              className="mb-4 inline-flex items-center gap-2 rounded-lg border border-primary/20 px-5 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary/5"
+            >
+              Explore Services
+              <ArrowRight className="h-4 w-4" />
+            </a>
+
             {/* Trust signals */}
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
               <span className="flex items-center gap-1.5">
                 <span className="h-2 w-2 rounded-full bg-green-500" />
                 HIPAA · SOC 2 · PCI DSS Aligned
               </span>
-              <span>Trusted by Healthcare, Legal & SMBs</span>
+              <span className="flex items-center gap-1.5">
+                <MapPin className="h-3.5 w-3.5" />
+                Serving businesses across the United States
+              </span>
             </div>
           </div>
 
