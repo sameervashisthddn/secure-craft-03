@@ -100,7 +100,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
-      <div className="container mx-auto flex h-24 items-center justify-between gap-8 px-6">
+      <div className="container mx-auto flex h-48 items-center justify-between gap-8 px-6">
 
         {/* Logo */}
         <Link
@@ -108,7 +108,7 @@ const Navbar = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
           className="flex shrink-0 items-center"
         >
-          <img src={logo} alt="Crabtree Solutions Inc." className="h-20 w-auto object-contain" />
+          <img src={logo} alt="Crabtree Solutions Inc." className="h-44 w-auto object-contain" />
         </Link>
 
         {/* Desktop nav — centered */}
