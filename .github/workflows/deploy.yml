@@ -21,7 +21,12 @@ jobs:
           node-version: 20
 
       - run: npm install
+
       - run: npm run build
+
+      # Install Chrome for Puppeteer and run prerender
+      - run: npx puppeteer browsers install chrome
+      - run: node scripts/prerender.mjs
 
       - uses: actions/upload-pages-artifact@v3
         with:
