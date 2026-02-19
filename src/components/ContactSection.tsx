@@ -44,14 +44,14 @@ const ContactSection = () => {
   return (
     <section id="contact" className="section-padding section-alt">
       <div className="container mx-auto px-6">
-        <h2 className="mb-3 text-3xl font-bold text-primary md:text-4xl">Get in touch</h2>
+        <h2 className="mb-3 text-3xl font-bold text-primary md:text-4xl">Let's Talk About Your IT Needs</h2>
         <p className="mb-12 max-w-lg text-muted-foreground">
-          Tell us about your goals. We'll reach out within one business day to discuss your needs.
+          Whether you need managed IT support, a security assessment, or infrastructure optimization — we'll respond within one business day.
         </p>
 
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <h3 className="mb-6 text-xl font-semibold text-foreground">Contact Us</h3>
+            <h3 className="mb-6 text-xl font-semibold text-foreground">Request a Consultation</h3>
             <form onSubmit={handleSubmit} className="space-y-4" noValidate>
               <div>
                 <label className="mb-1.5 block text-sm font-medium text-foreground">Name</label>

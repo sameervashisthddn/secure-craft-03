@@ -46,11 +46,11 @@ const TestimonialsSection = () => {
     <section className="section-padding section-alt">
       <div className="container mx-auto px-6">
         <h2 className="mb-2 text-center text-3xl font-bold text-primary md:text-4xl">
-          Trusted by Businesses
+          Trusted by IT Leaders Across Industries
         </h2>
         <p className="mx-auto mb-10 max-w-lg text-center text-muted-foreground">
-          Hear what our clients have to say about working with Crabtree
-          Solutions.
+          From healthcare to legal to staffing — hear how our managed IT and
+          cybersecurity services deliver real results.
         </p>
 
         <div className="relative mx-auto max-w-2xl">

@@ -4,32 +4,32 @@ import { Button } from "@/components/ui/button";
 const services = [
   {
     icon: Server,
-    title: "Managed IT",
-    text: "Reliable IT support tailored for SMBs.",
+    title: "Managed IT Services",
+    text: "24/7 monitoring, helpdesk, and proactive infrastructure management — so your team stays productive and your systems stay running.",
     cta: "Schedule Consultation",
   },
   {
     icon: ShieldCheck,
-    title: "Cybersecurity",
-    text: "Compliance-first protection for HIPAA, SOC 2, PCI DSS.",
+    title: "Cybersecurity & Compliance",
+    text: "Endpoint protection, threat detection, and compliance alignment for HIPAA, SOC 2, and PCI DSS regulated environments.",
     cta: "Talk to an Expert",
   },
   {
     icon: Globe,
-    title: "VAPT",
-    text: "Identify vulnerabilities before attackers do.",
+    title: "Vulnerability Assessment & Pen Testing",
+    text: "Comprehensive security assessments to uncover gaps in your network, applications, and infrastructure before attackers do.",
     cta: "Request Assessment",
   },
   {
     icon: ClipboardCheck,
-    title: "Startup IT",
-    text: "Scalable IT setups for growing startups.",
+    title: "Startup IT & Security",
+    text: "Right-sized IT infrastructure and security for early-stage companies — scalable, cost-effective, and built for growth.",
     cta: "Get Started",
   },
   {
     icon: Lock,
-    title: "Secure Remote Access & VPN",
-    text: "Controlled, secure remote access aligned with compliance requirements.",
+    title: "Enterprise VPN & Secure Remote Access",
+    text: "Site-to-site and remote access VPN solutions with zero-trust policies, MFA enforcement, and compliance-ready configurations.",
     cta: "Learn More",
   },
 ];
@@ -39,10 +39,10 @@ const CoreServicesSection = () => {
     <section id="services" className="section-padding section-alt">
       <div className="container mx-auto px-6">
         <h2 className="mb-2 text-3xl font-bold text-primary md:text-4xl">
-          Our Services
+          Managed IT & Cybersecurity Services
         </h2>
         <p className="mb-10 max-w-lg text-muted-foreground">
-          Cybersecurity Services in Texas — built for compliance and reliability.
+          End-to-end IT management and security solutions — built for compliance, reliability, and business continuity.
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
