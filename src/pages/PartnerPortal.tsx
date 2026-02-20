@@ -301,12 +301,12 @@ export default function PartnerPortal() {
       <Navbar />
 
       {/* ── Hero ── */}
-      <section className="bg-foreground pt-10 pb-20 md:pt-14 md:pb-28">
+      <section className="bg-background pt-10 pb-20 md:pt-14 md:pb-28 border-b border-border">
         <div className="container mx-auto px-6 text-center">
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
             <Star className="h-3.5 w-3.5" /> Partner &amp; Vendor Portal
           </span>
-          <h1 className="mx-auto mt-5 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
+          <h1 className="mx-auto mt-5 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
             Grow Your MSP With a Trusted Behind-the-Scenes Delivery Partner
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
