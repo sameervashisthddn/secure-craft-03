@@ -31,6 +31,7 @@ const techPartners = [
   {
     name: "SentinelOne",
     logo: sentineloneLogo,
+    url: "https://www.sentinelone.com",
     badge: "Authorized Partner",
     role: "Endpoint Security and Threat Protection Platform",
     description:
@@ -40,6 +41,7 @@ const techPartners = [
   {
     name: "Sophos",
     logo: sophosLogo,
+    url: "https://www.sophos.com",
     badge: null,
     role: "Network and Endpoint Security Solutions",
     description:
@@ -49,6 +51,7 @@ const techPartners = [
   {
     name: "Fortinet",
     logo: fortinetLogo,
+    url: "https://www.fortinet.com",
     badge: null,
     role: "Enterprise Network Security Platform",
     description:
@@ -58,6 +61,7 @@ const techPartners = [
   {
     name: "Microsoft",
     logo: microsoftLogo,
+    url: "https://www.microsoft.com",
     badge: null,
     role: "Cloud and Productivity Infrastructure",
     description:
@@ -223,9 +227,14 @@ export default function Partnerships() {
                 key={p.name}
                 className="flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-shadow hover:shadow-md"
               >
-                <div className="mb-4 flex h-28 items-center justify-center rounded-xl border border-border bg-background p-4">
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mb-4 flex h-28 items-center justify-center rounded-xl border border-border bg-background p-4 transition-shadow hover:shadow-md"
+                >
                   <img src={p.logo} alt={p.name} className={`${p.logoClass} object-contain`} />
-                </div>
+                </a>
                 {p.badge && (
                   <span className="mb-2 inline-flex w-fit items-center rounded-full border border-primary/30 bg-primary/5 px-2.5 py-0.5 text-xs font-semibold text-primary">
                     ✓ {p.badge}
