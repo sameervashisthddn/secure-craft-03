@@ -35,6 +35,14 @@ const navLinks: NavItem[] = [
   },
   { label: "About", href: "/#about" },
   { label: "Contact", href: "/#contact" },
+  {
+    label: "Partners",
+    href: "/partner",
+    children: [
+      { label: "Partner Portal", href: "/partner" },
+      { label: "Request a Partner Quote", href: "/partner#partner-form" },
+    ],
+  },
 ];
 
 const Navbar = () => {
