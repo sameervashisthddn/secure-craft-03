@@ -12,7 +12,6 @@ import {
   Server,
   ArrowRight,
   Star,
-  Building2,
   Award,
   FileText,
   Globe,
@@ -20,6 +19,7 @@ import {
   EyeOff,
   Layers,
 } from "lucide-react";
+import eliteRcmLogo from "@/assets/partners/elite-rcm-logo.png";
 import fortinetLogo from "@/assets/vendors/fortinet.png";
 import sophosLogo from "@/assets/vendors/sophos.png";
 import sentineloneLogo from "@/assets/vendors/sentinelone.png";
@@ -144,22 +144,29 @@ export default function Partnerships() {
 
             {/* Partner Card */}
             <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
-              <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-6">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-border bg-background shadow-sm">
-                  <Building2 className="h-8 w-8 text-primary" />
+              {/* Logo + Badge Header */}
+              <div className="mb-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+                <div className="flex h-24 w-48 shrink-0 items-center justify-center rounded-xl border border-border bg-white p-4 shadow-sm">
+                  <img
+                    src={eliteRcmLogo}
+                    alt="Elite Revenue Cycle Management System"
+                    className="h-full w-full object-contain"
+                  />
                 </div>
                 <div>
-                  <div className="mb-1 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-semibold text-primary">
+                  <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-semibold text-primary">
                     <Award className="h-3 w-3" /> Strategic Partner — USA
                   </div>
-                  <h3 className="mt-2 text-xl font-bold text-foreground">
-                    Elite Revenue Cycle Management System (USA)
+                  <h3 className="text-xl font-bold text-foreground">
+                    Elite Revenue Cycle Management System
                   </h3>
                   <p className="text-sm font-medium text-muted-foreground">
-                    Healthcare Revenue Cycle Management Organization
+                    Healthcare Revenue Cycle Management Organization — USA
                   </p>
                 </div>
               </div>
+
+              {/* Body */}
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   Crabtree Solutions Inc maintains a strategic partnership with Elite Revenue Cycle
@@ -173,9 +180,15 @@ export default function Partnerships() {
                   expertise, and long-term operational stability.
                 </p>
                 <p className="font-medium text-foreground">
-                  This strategic collaboration demonstrates the trust placed in Crabtree Solutions
-                  Inc to support real-world production environments for established U.S.-based
-                  organizations.
+                  This partnership reflects trust, professional collaboration, and long-term mutual growth.
+                </p>
+              </div>
+
+              {/* Trust signal footer */}
+              <div className="mt-6 flex items-center gap-2 rounded-xl border border-primary/20 bg-primary/5 px-4 py-3">
+                <Shield className="h-4 w-4 shrink-0 text-primary" />
+                <p className="text-sm font-semibold text-primary">
+                  Trusted Strategic Partner supporting real-world production infrastructure.
                 </p>
               </div>
             </div>
