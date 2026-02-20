@@ -146,11 +146,12 @@ export default function Partnerships() {
             <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
               {/* Logo + Badge Header */}
               <div className="mb-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
-                <div className="flex h-24 w-48 shrink-0 items-center justify-center rounded-xl border border-border bg-white p-4 shadow-sm">
+                <div className="flex h-36 w-72 shrink-0 items-center justify-center rounded-xl border border-border bg-white p-5 shadow-sm">
                   <img
                     src={eliteRcmLogo}
                     alt="Elite Revenue Cycle Management System"
                     className="h-full w-full object-contain"
+                    style={{ imageRendering: "crisp-edges" }}
                   />
                 </div>
                 <div>
