@@ -146,13 +146,18 @@ export default function Partnerships() {
             <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
               {/* Logo + Badge Header */}
               <div className="mb-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
-                <div className="flex h-40 w-80 shrink-0 items-center justify-center rounded-xl border border-border bg-white p-6 shadow-sm">
+                <a
+                  href="https://eliterevenuecyclemanagementsystem.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-40 w-80 shrink-0 items-center justify-center rounded-xl border border-border bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                >
                   <img
                     src={eliteRcmLogo}
                     alt="Elite Revenue Cycle Management System"
                     className="h-full w-full object-contain"
                   />
-                </div>
+                </a>
                 <div>
                   <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-semibold text-primary">
                     <Award className="h-3 w-3" /> Strategic Partner — USA
