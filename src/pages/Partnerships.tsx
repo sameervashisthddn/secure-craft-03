@@ -154,7 +154,7 @@ export default function Partnerships() {
                   href="https://eliterevenuecyclemanagementsystem.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-52 w-96 shrink-0 items-center justify-center rounded-xl border border-border bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                  className="flex h-40 w-full sm:h-52 sm:w-96 shrink-0 items-center justify-center rounded-xl border border-border bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
                 >
                   <img
                     src={eliteRcmLogo}
