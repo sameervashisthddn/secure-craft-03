@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# Disallow admin/internal paths (none currently, but best practice)
+Disallow: /404
+
 Sitemap: https://crabtreesolutions.us/sitemap.xml
