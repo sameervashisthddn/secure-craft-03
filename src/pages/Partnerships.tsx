@@ -66,7 +66,7 @@ const techPartners = [
   },
 ];
 
-const channelBenefits = [
+const strategicBenefits = [
   { icon: Zap, text: "Fast partner quotations and technical solution design" },
   { icon: EyeOff, text: "White-label delivery support" },
   { icon: Server, text: "Engineering expertise for infrastructure and security projects" },
@@ -110,8 +110,8 @@ export default function Partnerships() {
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a href="#channel-partner">
-              <Button size="lg" className="px-8 text-base">
-                Become a Channel Partner <ArrowRight className="ml-1 h-4 w-4" />
+            <Button size="lg" className="px-8 text-base">
+                Become a Strategic Partner <ArrowRight className="ml-1 h-4 w-4" />
               </Button>
             </a>
             <a href="/partner#partner-form">
@@ -222,18 +222,18 @@ export default function Partnerships() {
         </div>
       </section>
 
-      {/* ── Channel Partner Program ── */}
+      {/* ── Strategic Partner Program ── */}
       <section id="channel-partner" className="section-padding section-alt">
         <div className="container mx-auto px-6">
           <div className="mx-auto max-w-4xl">
             <div className="mb-2 flex items-center gap-2">
               <Users className="h-5 w-5 text-primary" />
               <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-                Channel Partner Program
+                Strategic Partner Program
               </span>
             </div>
             <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
-              Channel Partner Program
+              Strategic Partner Program
             </h2>
             <p className="mb-4 text-lg text-muted-foreground">
               Crabtree Solutions Inc collaborates with IT service providers, MSPs, consultants, and
@@ -241,13 +241,13 @@ export default function Partnerships() {
               technical expertise, and help partners expand their service capabilities.
             </p>
             <p className="mb-10 text-lg text-muted-foreground">
-              Our channel partner program enables vendors to leverage our engineering expertise
+              Our strategic partner program enables organizations to leverage our engineering expertise
               while maintaining full ownership of their client relationships.
             </p>
 
-            <h3 className="mb-6 text-xl font-bold text-foreground">Channel Partner Benefits</h3>
+            <h3 className="mb-6 text-xl font-bold text-foreground">Strategic Partner Benefits</h3>
             <div className="grid gap-4 sm:grid-cols-2">
-              {channelBenefits.map((b) => (
+              {strategicBenefits.map((b) => (
                 <div key={b.text} className="flex items-start gap-3 rounded-xl border border-border bg-card p-4 shadow-sm">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                     <b.icon className="h-4 w-4 text-primary" />
@@ -260,7 +260,7 @@ export default function Partnerships() {
             <div className="mt-10 text-center">
               <a href="/partner#partner-form">
                 <Button size="lg" className="px-8 text-base">
-                  Apply for Channel Partner Access <ArrowRight className="ml-1 h-4 w-4" />
+                  Apply for Strategic Partner Access <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>
               </a>
             </div>
