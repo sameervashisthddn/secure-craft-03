@@ -100,7 +100,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
-      <div className="container mx-auto flex h-48 items-center justify-between gap-8 px-6">
+      <div className="container mx-auto flex items-center justify-between gap-8 px-6 py-1">
 
         {/* Logo */}
         <Link
