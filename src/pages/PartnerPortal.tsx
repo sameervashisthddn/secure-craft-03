@@ -561,12 +561,12 @@ export default function PartnerPortal() {
       </section>
 
       {/* ── Partner-Only Access ── */}
-      <section id="apply" className="section-padding bg-foreground">
+      <section id="apply" className="section-padding bg-background border-t border-border">
         <div className="container mx-auto px-6 text-center">
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
             <Lock className="h-3.5 w-3.5" /> Partner-Only Access
           </span>
-          <h2 className="mx-auto mt-5 max-w-2xl text-3xl font-bold text-primary-foreground md:text-4xl">
+          <h2 className="mx-auto mt-5 max-w-2xl text-3xl font-bold text-foreground md:text-4xl">
             Ready to Scale Your MSP?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
