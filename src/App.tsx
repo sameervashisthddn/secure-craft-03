@@ -13,6 +13,7 @@ import LegalPage from "./pages/industries/Legal";
 import StaffingPage from "./pages/industries/Staffing";
 import SMBPage from "./pages/industries/SMB";
 import PartnerPortal from "./pages/PartnerPortal";
+import Partnerships from "./pages/Partnerships";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/industries/staffing" element={<StaffingPage />} />
             <Route path="/industries/smb" element={<SMBPage />} />
             <Route path="/partner" element={<PartnerPortal />} />
+            <Route path="/partnerships" element={<Partnerships />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -115,8 +115,13 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <Link to="/partner" className="font-medium text-primary transition-colors hover:text-primary/80">
-                  Partner Portal →
+              <Link to="/partnerships" className="font-medium text-primary transition-colors hover:text-primary/80">
+                  Partnerships →
+                </Link>
+              </li>
+              <li>
+                <Link to="/partner" className="text-muted-foreground transition-colors hover:text-primary">
+                  Partner Portal
                 </Link>
               </li>
               <li>
