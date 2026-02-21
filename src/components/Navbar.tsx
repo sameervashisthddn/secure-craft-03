@@ -109,16 +109,16 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
-      <div className="container mx-auto flex h-[166px] items-center justify-between gap-8 px-6">
+      <div className="container mx-auto flex h-[116px] items-center justify-between gap-8 px-6">
 
         {/* Logo */}
         <Link
           to="/"
           onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
           className="flex shrink-0 items-center overflow-hidden"
-          style={{ height: "166px" }}
+          style={{ height: "116px" }}
         >
-          <img src={logo} alt="Crabtree Solutions Inc." className="h-44 w-auto object-contain" />
+          <img src={logo} alt="Crabtree Solutions Inc." className="h-[123px] w-auto object-contain" />
         </Link>
 
         {/* Desktop nav — centered */}
