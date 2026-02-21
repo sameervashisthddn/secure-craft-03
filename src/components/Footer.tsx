@@ -55,6 +55,8 @@ const Footer = () => {
               <div>
                 <p className="font-medium text-foreground">USA Office</p>
                 <p>Crabtree Solutions Inc.</p>
+                <p>11700 Lebanon Rd, Suite 924</p>
+                <p>Frisco, TX 75035</p>
               </div>
             </div>
           </div>

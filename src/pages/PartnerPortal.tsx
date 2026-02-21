@@ -62,7 +62,7 @@ function PartnerForm() {
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
       e.email = "A valid business email is required.";
     if (!form.serviceArea.trim()) e.serviceArea = "Service area / state is required.";
-    if (!form.endpointCount.trim()) e.endpointCount = "User / endpoint count is required.";
+    if (!form.endpointCount.trim()) e.endpointCount = "User count is required.";
     if (!form.locations.trim()) e.locations = "Number of locations is required.";
     if (!form.clientGoals.trim()) e.clientGoals = "Client goals are required.";
     if (!form.needWhiteLabel) e.needWhiteLabel = "Please select an option.";
@@ -88,7 +88,7 @@ Email: ${form.email.slice(0, MAX_SHORT)}
 Phone: ${form.phone.slice(0, MAX_SHORT)}
 Service Area / State: ${form.serviceArea.slice(0, MAX_SHORT)}
 Client Industry: ${form.clientIndustry.slice(0, MAX_SHORT)}
-User / Endpoint Count: ${form.endpointCount.slice(0, MAX_SHORT)}
+User Count: ${form.endpointCount.slice(0, MAX_SHORT)}
 Locations: ${form.locations.slice(0, MAX_SHORT)}
 Current Environment: ${form.currentEnvironment.slice(0, MAX_TEXT)}
 Client Goals: ${form.clientGoals.slice(0, MAX_TEXT)}
@@ -158,8 +158,8 @@ Attachment: ${fileName || "None"}
           <input name="clientIndustry" value={form.clientIndustry} onChange={handleChange} placeholder="Healthcare, Legal, Finance…" className={field} />
         </div>
         <div>
-          {label("User / Endpoint Count", true)}
-          <input name="endpointCount" value={form.endpointCount} onChange={handleChange} placeholder="e.g. 50 users, 80 endpoints" className={field} />
+          {label("User Count", true)}
+          <input name="endpointCount" value={form.endpointCount} onChange={handleChange} placeholder="e.g. 50 users" className={field} />
           {errMsg("endpointCount")}
         </div>
         <div>
@@ -171,7 +171,7 @@ Attachment: ${fileName || "None"}
 
       <div>
         {label("Current Environment")}
-        <textarea name="currentEnvironment" value={form.currentEnvironment} onChange={handleChange} rows={3} placeholder="Describe existing infrastructure, tools, vendors…" className={field} maxLength={MAX_TEXT} />
+        <textarea name="currentEnvironment" value={form.currentEnvironment} onChange={handleChange} rows={3} placeholder="Please share a brief overview of your current IT infrastructure, including firewall, network security, servers, endpoint protection, VPN, and any cloud services in use. This will help us assess and recommend the best approach." className={field} maxLength={MAX_TEXT} />
       </div>
 
       <div>
