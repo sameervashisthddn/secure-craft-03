@@ -28,10 +28,10 @@ const VAPTSection = () => {
   return (
     <section id="vapt" className="section-padding section-alt">
       <div className="container mx-auto px-6">
-        <h2 className="mb-3 text-3xl font-bold text-primary md:text-4xl">
+        <h2 className="mb-3 text-center text-3xl font-bold text-primary md:text-4xl">
           Vulnerability Assessment & Penetration Testing (VAPT)
         </h2>
-        <p className="mb-10 max-w-3xl text-muted-foreground">
+        <p className="mx-auto mb-10 max-w-3xl text-center text-muted-foreground">
           Alerting today for a safer tomorrow. Identify weaknesses before attackers do and prioritize remediation to reduce risk across applications, networks, and cloud.
         </p>
 

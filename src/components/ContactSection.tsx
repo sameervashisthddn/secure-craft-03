@@ -44,8 +44,8 @@ const ContactSection = () => {
   return (
     <section id="contact" className="section-padding section-alt">
       <div className="container mx-auto px-6">
-        <h2 className="mb-3 text-3xl font-bold text-primary md:text-4xl">Let's Talk About Your IT Needs</h2>
-        <p className="mb-12 max-w-lg text-muted-foreground">
+        <h2 className="mb-3 text-center text-3xl font-bold text-primary md:text-4xl">Let's Talk About Your IT Needs</h2>
+        <p className="mx-auto mb-12 max-w-lg text-center text-muted-foreground">
           Whether you need managed IT support, a security assessment, or infrastructure optimization — we'll respond within one business day.
         </p>
 

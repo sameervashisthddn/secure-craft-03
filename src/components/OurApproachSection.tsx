@@ -32,10 +32,10 @@ const OurApproachSection = () => {
   return (
     <section id="approach" className="section-padding">
       <div className="container mx-auto px-6">
-        <h2 className="mb-4 text-3xl font-bold text-primary md:text-4xl">
+        <h2 className="mb-4 text-center text-3xl font-bold text-primary md:text-4xl">
           Our Approach
         </h2>
-        <p className="mb-10 max-w-3xl text-base leading-relaxed text-muted-foreground">
+        <p className="mx-auto mb-10 max-w-3xl text-center text-base leading-relaxed text-muted-foreground">
           We begin with a comprehensive review of your existing IT infrastructure to identify security risks, reliability issues, and inefficiencies. Based on this assessment, we recommend and implement practical improvements aligned with your business needs.
         </p>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">

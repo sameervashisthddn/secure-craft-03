@@ -38,10 +38,10 @@ const CoreServicesSection = () => {
   return (
     <section id="services" className="section-padding section-alt">
       <div className="container mx-auto px-6">
-        <h2 className="mb-2 text-3xl font-bold text-primary md:text-4xl">
+        <h2 className="mb-2 text-center text-3xl font-bold text-primary md:text-4xl">
           Managed IT & Cybersecurity Services
         </h2>
-        <p className="mb-10 max-w-lg text-muted-foreground">
+        <p className="mx-auto mb-10 max-w-lg text-center text-muted-foreground">
           End-to-end IT management and security solutions — built for compliance, reliability, and business continuity.
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -6,7 +6,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <h2 className="mb-3 text-3xl font-bold text-primary md:text-4xl">About Crabtree</h2>
+            <h2 className="mb-3 text-center text-3xl font-bold text-primary md:text-4xl lg:text-left">About Crabtree</h2>
             <p className="mb-6 text-muted-foreground leading-relaxed">
               We partner with healthcare providers, law firms, staffing agencies, and small-to-midsize businesses to design, implement, and manage secure IT environments. Our team blends deep expertise with a pragmatic approach to deliver measurable outcomes.
             </p>
@@ -32,8 +32,8 @@ const AboutSection = () => {
 
         {/* Why Choose Us */}
         <div className="mt-20">
-          <h2 className="mb-3 text-3xl font-bold text-primary md:text-4xl">Why Choose Us</h2>
-          <p className="mb-10 max-w-2xl text-muted-foreground">
+          <h2 className="mb-3 text-center text-3xl font-bold text-primary md:text-4xl">Why Choose Us</h2>
+          <p className="mx-auto mb-10 max-w-2xl text-center text-muted-foreground">
             Enterprise-grade delivery, SMB-friendly approach. We combine proven methodologies with a pragmatic engagement model.
           </p>
           <div className="grid gap-6 sm:grid-cols-3">
