@@ -33,7 +33,6 @@ const navLinks: NavItem[] = [
       { label: "Small & Midsize Business", href: "/industries/smb" },
     ],
   },
-  { label: "About", href: "/#about" },
   {
     label: "Partners",
     href: "/partnerships",
@@ -43,6 +42,7 @@ const navLinks: NavItem[] = [
       { label: "Request a Partner Quote", href: "/partner#partner-form" },
     ],
   },
+  { label: "About", href: "/#about" },
   { label: "Contact", href: "/#contact" },
 ];
 
