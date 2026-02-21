@@ -91,7 +91,7 @@ const IndustryPageLayout = ({
         {/* Services */}
         <section className="section-padding">
           <div className="container mx-auto px-6">
-            <h2 className="mb-8 text-3xl font-bold text-foreground">
+            <h2 className="mb-8 text-center text-3xl font-bold text-foreground">
               What We Deliver
             </h2>
             <ul className="grid gap-3 md:grid-cols-2">
@@ -109,7 +109,7 @@ const IndustryPageLayout = ({
         {compliance.length > 0 && (
           <section className="section-padding section-alt">
             <div className="container mx-auto px-6">
-              <h2 className="mb-6 text-3xl font-bold text-foreground">
+              <h2 className="mb-6 text-center text-3xl font-bold text-foreground">
                 Compliance & Standards
               </h2>
               <div className="flex flex-wrap gap-3">
