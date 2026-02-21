@@ -34,7 +34,6 @@ const navLinks: NavItem[] = [
     ],
   },
   { label: "About", href: "/#about" },
-  { label: "Contact", href: "/#contact" },
   {
     label: "Partners",
     href: "/partnerships",
@@ -44,6 +43,7 @@ const navLinks: NavItem[] = [
       { label: "Request a Partner Quote", href: "/partner#partner-form" },
     ],
   },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
