@@ -49,78 +49,75 @@ const ContactSection = () => {
           Whether you need managed IT support, a security assessment, or infrastructure optimization — we'll respond within one business day.
         </p>
 
-        <div className="grid gap-12 lg:grid-cols-2">
-          <div>
-            <h3 className="mb-6 text-xl font-semibold text-foreground">Request a Consultation</h3>
-            <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-foreground">Name</label>
-                <input
-                  type="text"
-                  required
-                  maxLength={MAX_NAME}
-                  value={form.name}
-                  onChange={(e) => { setForm({ ...form, name: e.target.value }); setErrors((p) => ({ ...p, name: undefined })); }}
-                  className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                  placeholder="Your name"
-                />
-                {errors.name && <p className="mt-1 text-xs text-destructive">{errors.name}</p>}
+        <div className="mx-auto max-w-xl">
+          <h3 className="mb-6 text-center text-xl font-semibold text-foreground">Request a Consultation</h3>
+          <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-foreground">Name</label>
+              <input
+                type="text"
+                required
+                maxLength={MAX_NAME}
+                value={form.name}
+                onChange={(e) => { setForm({ ...form, name: e.target.value }); setErrors((p) => ({ ...p, name: undefined })); }}
+                className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                placeholder="Your name"
+              />
+              {errors.name && <p className="mt-1 text-xs text-destructive">{errors.name}</p>}
+            </div>
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-foreground">Email</label>
+              <input
+                type="email"
+                required
+                maxLength={MAX_EMAIL}
+                value={form.email}
+                onChange={(e) => { setForm({ ...form, email: e.target.value }); setErrors((p) => ({ ...p, email: undefined })); }}
+                className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                placeholder="you@company.com"
+              />
+              {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
+            </div>
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-foreground">Message</label>
+              <textarea
+                required
+                rows={4}
+                maxLength={MAX_MESSAGE}
+                value={form.message}
+                onChange={(e) => { setForm({ ...form, message: e.target.value }); setErrors((p) => ({ ...p, message: undefined })); }}
+                className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+                placeholder="Tell us about your IT challenges or how we can help..."
+              />
+              <div className="mt-1 flex justify-between">
+                {errors.message ? <p className="text-xs text-destructive">{errors.message}</p> : <span />}
+                <span className="text-xs text-muted-foreground">{form.message.length}/{MAX_MESSAGE}</span>
               </div>
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-foreground">Email</label>
-                <input
-                  type="email"
-                  required
-                  maxLength={MAX_EMAIL}
-                  value={form.email}
-                  onChange={(e) => { setForm({ ...form, email: e.target.value }); setErrors((p) => ({ ...p, email: undefined })); }}
-                  className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                  placeholder="you@company.com"
-                />
-                {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
-              </div>
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-foreground">Message</label>
-                <textarea
-                  required
-                  rows={4}
-                  maxLength={MAX_MESSAGE}
-                  value={form.message}
-                  onChange={(e) => { setForm({ ...form, message: e.target.value }); setErrors((p) => ({ ...p, message: undefined })); }}
-                  className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                  placeholder="Tell us about your IT challenges or how we can help..."
-                />
-                <div className="mt-1 flex justify-between">
-                  {errors.message ? <p className="text-xs text-destructive">{errors.message}</p> : <span />}
-                  <span className="text-xs text-muted-foreground">{form.message.length}/{MAX_MESSAGE}</span>
-                </div>
-              </div>
+            </div>
+            <div className="text-center">
               <Button type="submit" size="lg" className="w-full sm:w-auto">Send Message</Button>
-            </form>
-          </div>
+            </div>
+          </form>
 
-          <div>
-            <h3 className="mb-6 text-xl font-semibold text-foreground">Our Office</h3>
-            <div className="space-y-4 text-sm text-muted-foreground">
-              <div className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <div>
-                  <p>11700 Lebanon Rd, Suite 924</p>
-                  <p>Frisco, TX 75035</p>
-                </div>
+          <div className="mt-12 flex flex-col items-center gap-4 text-sm text-muted-foreground">
+            <div className="flex items-start gap-3">
+              <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <div className="text-center">
+                <p>11700 Lebanon Rd, Suite 924</p>
+                <p>Frisco, TX 75035</p>
               </div>
-              <div className="flex items-center gap-3">
-                <Phone className="h-5 w-5 shrink-0 text-primary" />
-                <a href="tel:+14697272810" className="text-primary hover:underline" rel="noopener noreferrer">
-                  +1 (469) 727-2810
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="h-5 w-5 shrink-0 text-primary" />
-                <a href="mailto:info@crabtreesolutions.us" className="text-primary hover:underline" rel="noopener noreferrer">
-                  info@crabtreesolutions.us
-                </a>
-              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <Phone className="h-5 w-5 shrink-0 text-primary" />
+              <a href="tel:+14697272810" className="text-primary hover:underline" rel="noopener noreferrer">
+                +1 (469) 727-2810
+              </a>
+            </div>
+            <div className="flex items-center gap-3">
+              <Mail className="h-5 w-5 shrink-0 text-primary" />
+              <a href="mailto:info@crabtreesolutions.us" className="text-primary hover:underline" rel="noopener noreferrer">
+                info@crabtreesolutions.us
+              </a>
             </div>
           </div>
         </div>
