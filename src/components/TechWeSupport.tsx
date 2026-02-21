@@ -18,7 +18,7 @@ const TechWeSupport = () => {
   return (
     <section className="section-padding section-alt">
       <div className="container mx-auto px-6">
-        <h2 className="mb-8 text-3xl font-bold text-primary md:text-4xl">
+        <h2 className="mb-8 text-center text-3xl font-bold text-primary md:text-4xl">
           Technologies We Support
         </h2>
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
