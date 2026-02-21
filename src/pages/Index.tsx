@@ -42,6 +42,12 @@ const Index = () => {
         <CoreServicesSection />
       </ScrollReveal>
       <ScrollReveal>
+        <VAPTSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <StartupTeaser />
+      </ScrollReveal>
+      <ScrollReveal>
         <WhyChooseUsSection />
       </ScrollReveal>
       <ScrollReveal>
@@ -58,12 +64,6 @@ const Index = () => {
       </ScrollReveal>
       <ScrollReveal>
         <FinalCTASection />
-      </ScrollReveal>
-      <ScrollReveal>
-        <StartupTeaser />
-      </ScrollReveal>
-      <ScrollReveal>
-        <VAPTSection />
       </ScrollReveal>
       <ScrollReveal>
         <AboutSection />
