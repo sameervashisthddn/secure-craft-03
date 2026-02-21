@@ -131,16 +131,16 @@ export default function Partnerships() {
       <section className="section-padding section-alt">
         <div className="container mx-auto px-6">
           <div className="mx-auto max-w-4xl">
-            <div className="mb-2 flex items-center gap-2">
+            <div className="mb-2 flex items-center justify-center gap-2">
               <Star className="h-5 w-5 text-primary" />
               <span className="text-sm font-semibold uppercase tracking-widest text-primary">
                 Strategic Partnership Highlight
               </span>
             </div>
-            <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
+            <h2 className="mb-4 text-center text-3xl font-bold text-foreground md:text-4xl">
               Strategic Partnership Highlight
             </h2>
-            <p className="mb-10 text-lg text-muted-foreground">
+            <p className="mb-10 text-center text-lg text-muted-foreground">
               Crabtree Solutions Inc maintains strategic partnerships with established organizations
               to support secure IT infrastructure, strengthen operational reliability, and enable
               long-term mutual growth.
