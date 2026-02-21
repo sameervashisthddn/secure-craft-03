@@ -24,6 +24,12 @@ const benefits = [
   "Assists in achieving and maintaining compliance requirements",
 ];
 
+const whyNeeded = [
+  "Vulnerabilities exist across all environments: applications, network devices, and cloud infrastructure.",
+  "SMBs are frequently targeted; proactive testing reduces financial and reputational risk.",
+  "Supports compliance initiatives (e.g., HIPAA, SOC 2, PCI DSS, ISO 27001) with evidence-based reporting.",
+];
+
 const VAPTSection = () => {
   return (
     <section id="vapt" className="section-padding section-alt">
@@ -31,56 +37,69 @@ const VAPTSection = () => {
         <h2 className="mb-3 text-center text-3xl font-bold text-primary md:text-4xl">
           Vulnerability Assessment & Penetration Testing (VAPT)
         </h2>
-        <p className="mx-auto mb-10 max-w-3xl text-center text-muted-foreground">
+        <p className="mx-auto mb-12 max-w-3xl text-center text-muted-foreground">
           Alerting today for a safer tomorrow. Identify weaknesses before attackers do and prioritize remediation to reduce risk across applications, networks, and cloud.
         </p>
 
-        <div className="grid gap-10 lg:grid-cols-2 mb-12">
-          <div>
-            <h3 className="mb-3 text-xl font-semibold text-foreground">What is VAPT?</h3>
-            <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
-              VAPT combines two complementary approaches: Vulnerability Assessment to discover weaknesses across assets, and Penetration Testing to safely exploit and validate real-world impact. Together they provide a comprehensive view of security posture and actionable remediation guidance.
-            </p>
-            <h3 className="mb-3 text-xl font-semibold text-foreground">Why do organizations need VAPT?</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li className="flex items-start gap-2"><span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />Vulnerabilities exist across all environments: applications, network devices, and cloud infrastructure.</li>
-              <li className="flex items-start gap-2"><span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />SMBs are frequently targeted; proactive testing reduces financial and reputational risk.</li>
-              <li className="flex items-start gap-2"><span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />Supports compliance initiatives (e.g., HIPAA, SOC 2, PCI DSS, ISO 27001) with evidence-based reporting.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-3 text-xl font-semibold text-foreground">Typical VAPT Process</h3>
-            <ol className="mb-6 space-y-2">
-              {steps.map((s, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">{i + 1}</span>
-                  {s}
-                </li>
-              ))}
-            </ol>
-            <h3 className="mb-3 text-xl font-semibold text-foreground">Benefits</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              {benefits.map((b) => (
-                <li key={b} className="flex items-start gap-2">
-                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
-                  {b}
-                </li>
-              ))}
-            </ul>
-          </div>
+        {/* What is VAPT */}
+        <div className="mx-auto max-w-3xl text-center mb-12">
+          <h3 className="mb-3 text-xl font-semibold text-foreground">What is VAPT?</h3>
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            VAPT combines two complementary approaches: Vulnerability Assessment to discover weaknesses across assets, and Penetration Testing to safely exploit and validate real-world impact. Together they provide a comprehensive view of security posture and actionable remediation guidance.
+          </p>
         </div>
 
-        <div className="mb-8 text-center">
+        {/* Why organizations need VAPT */}
+        <div className="mx-auto max-w-3xl text-center mb-12">
+          <h3 className="mb-4 text-xl font-semibold text-foreground">Why do organizations need VAPT?</h3>
+          <ul className="mx-auto inline-block space-y-2 text-left text-sm text-muted-foreground">
+            {whyNeeded.map((item) => (
+              <li key={item} className="flex items-start gap-2">
+                <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Typical VAPT Process */}
+        <div className="mx-auto max-w-3xl text-center mb-12">
+          <h3 className="mb-4 text-xl font-semibold text-foreground">Typical VAPT Process</h3>
+          <ol className="mx-auto inline-block space-y-2 text-left">
+            {steps.map((s, i) => (
+              <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">{i + 1}</span>
+                {s}
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        {/* Benefits */}
+        <div className="mx-auto max-w-3xl text-center mb-12">
+          <h3 className="mb-4 text-xl font-semibold text-foreground">Benefits</h3>
+          <ul className="mx-auto inline-block space-y-2 text-left text-sm text-muted-foreground">
+            {benefits.map((b) => (
+              <li key={b} className="flex items-start gap-2">
+                <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                {b}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* CTA */}
+        <div className="mb-12 text-center">
           <a href="#contact">
             <Button size="lg">Get a Free Consultation</Button>
           </a>
         </div>
 
+        {/* Service Cards */}
         <div className="grid gap-6 sm:grid-cols-3">
           {vaptCards.map((c) => (
-            <div key={c.title} className="rounded-xl border border-border bg-background p-6">
-              <c.icon className="mb-3 h-8 w-8 text-primary" />
+            <div key={c.title} className="rounded-xl border border-border bg-background p-6 text-center">
+              <c.icon className="mx-auto mb-3 h-8 w-8 text-primary" />
               <h4 className="mb-2 font-semibold text-foreground">{c.title}</h4>
               <p className="text-sm text-muted-foreground">{c.desc}</p>
             </div>
