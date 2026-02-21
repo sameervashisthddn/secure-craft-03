@@ -208,16 +208,16 @@ export default function Partnerships() {
       {/* ── Technology Partners ── */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-6">
-          <div className="mb-2 flex items-center gap-2">
+          <div className="mb-2 flex items-center justify-center gap-2">
             <Shield className="h-5 w-5 text-primary" />
             <span className="text-sm font-semibold uppercase tracking-widest text-primary">
               Technology Partners
             </span>
           </div>
-          <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
+          <h2 className="mb-4 text-center text-3xl font-bold text-foreground md:text-4xl">
             Technology Partners
           </h2>
-          <p className="mb-10 max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto mb-10 max-w-2xl text-center text-lg text-muted-foreground">
             Crabtree Solutions Inc works with industry-leading technology platforms to deliver
             secure, scalable, and enterprise-grade IT infrastructure and security solutions.
           </p>
@@ -253,26 +253,26 @@ export default function Partnerships() {
       <section id="channel-partner" className="section-padding section-alt">
         <div className="container mx-auto px-6">
           <div className="mx-auto max-w-4xl">
-            <div className="mb-2 flex items-center gap-2">
+            <div className="mb-2 flex items-center justify-center gap-2">
               <Users className="h-5 w-5 text-primary" />
               <span className="text-sm font-semibold uppercase tracking-widest text-primary">
                 Strategic Partner Program
               </span>
             </div>
-            <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
+            <h2 className="mb-4 text-center text-3xl font-bold text-foreground md:text-4xl">
               Strategic Partner Program
             </h2>
-            <p className="mb-4 text-lg text-muted-foreground">
+            <p className="mb-4 text-center text-lg text-muted-foreground">
               Crabtree Solutions Inc collaborates with IT service providers, MSPs, consultants, and
               technology vendors across the United States to support service delivery, provide
               technical expertise, and help partners expand their service capabilities.
             </p>
-            <p className="mb-10 text-lg text-muted-foreground">
+            <p className="mb-10 text-center text-lg text-muted-foreground">
               Our strategic partner program enables organizations to leverage our engineering expertise
               while maintaining full ownership of their client relationships.
             </p>
 
-            <h3 className="mb-6 text-xl font-bold text-foreground">Strategic Partner Benefits</h3>
+            <h3 className="mb-6 text-center text-xl font-bold text-foreground">Strategic Partner Benefits</h3>
             <div className="grid gap-4 sm:grid-cols-2">
               {strategicBenefits.map((b) => (
                 <div key={b.text} className="flex items-start gap-3 rounded-xl border border-border bg-card p-4 shadow-sm">
