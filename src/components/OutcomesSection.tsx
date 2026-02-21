@@ -1,27 +1,33 @@
+import { TrendingDown, ShieldCheck, Eye, DollarSign, ClipboardCheck } from "lucide-react";
+
 const outcomes = [
-  "Reduced downtime with proactive monitoring and managed IT support",
-  "Strengthened security posture through endpoint protection and firewall hardening",
-  "Full visibility into network activity, user access, and system health",
-  "Lower IT costs through right-sized infrastructure and vendor optimization",
-  "Audit-ready compliance for HIPAA, SOC 2, and PCI DSS requirements",
+  { icon: TrendingDown, text: "Reduced downtime with proactive monitoring and managed IT support" },
+  { icon: ShieldCheck, text: "Strengthened security posture through endpoint protection and firewall hardening" },
+  { icon: Eye, text: "Full visibility into network activity, user access, and system health" },
+  { icon: DollarSign, text: "Lower IT costs through right-sized infrastructure and vendor optimization" },
+  { icon: ClipboardCheck, text: "Audit-ready compliance for HIPAA, SOC 2, and PCI DSS requirements" },
 ];
 
 const OutcomesSection = () => {
   return (
     <section className="section-padding section-alt">
       <div className="container mx-auto px-6">
-        <h2 className="mb-6 text-center text-3xl font-bold text-primary md:text-4xl">
+        <h2 className="mb-4 text-center text-3xl font-bold text-primary md:text-4xl">
           What Our Managed IT Clients Achieve
         </h2>
-        <p className="mb-6 text-center text-base text-muted-foreground">Measurable improvements our clients see after partnering with us:</p>
-        <ul className="mx-auto max-w-2xl space-y-3">
+        <p className="mx-auto mb-10 max-w-2xl text-center text-muted-foreground">
+          Measurable improvements our clients see after partnering with us:
+        </p>
+        <div className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-2">
           {outcomes.map((item) => (
-            <li key={item} className="flex items-start gap-3 text-base text-foreground">
-              <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
-              {item}
-            </li>
+            <div key={item.text} className="flex items-start gap-3 rounded-xl border border-border bg-card p-4 shadow-sm">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                <item.icon className="h-4 w-4 text-primary" />
+              </span>
+              <p className="text-sm text-foreground">{item.text}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );
