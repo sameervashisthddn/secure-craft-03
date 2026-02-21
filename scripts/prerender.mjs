@@ -28,6 +28,8 @@ const ROUTES = [
   '/industries/legal',
   '/industries/staffing',
   '/industries/smb',
+  '/partner',
+  '/partnerships',
 ];
 
 const MIME_TYPES = {
