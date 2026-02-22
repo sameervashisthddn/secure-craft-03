@@ -109,7 +109,7 @@ Page: ${pageUrl}
     try {
       const { data, error } = await supabase.functions.invoke("send-email", {
         body: {
-          to: "partner@crabtreesolutions.us",
+          to: "partners@crabtreesolutions.us",
           subject: `Website – Partner Portal Quote Request | ${form.companyName.slice(0, 60)}`,
           body,
           replyTo: form.email.trim(),
