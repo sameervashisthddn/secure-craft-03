@@ -47,8 +47,11 @@ const VAPTSection = () => {
         <div className="mb-12 grid gap-8 md:grid-cols-2">
           <div className="rounded-xl border border-border bg-background p-6">
             <h3 className="mb-3 text-xl font-semibold text-foreground">What is VAPT?</h3>
+            <p className="mb-3 text-sm leading-relaxed text-muted-foreground">
+              VAPT combines two complementary approaches: <strong className="text-foreground">Vulnerability Assessment</strong> systematically scans and identifies weaknesses across your IT assets, while <strong className="text-foreground">Penetration Testing</strong> simulates real-world attacks to safely exploit and validate the actual impact of those vulnerabilities.
+            </p>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              VAPT combines two complementary approaches: Vulnerability Assessment to discover weaknesses across assets, and Penetration Testing to safely exploit and validate real-world impact. Together they provide a comprehensive view of security posture and actionable remediation guidance.
+              Together, they deliver a comprehensive view of your security posture — uncovering hidden risks, validating the effectiveness of existing controls, and providing prioritized, actionable remediation guidance tailored to your environment.
             </p>
           </div>
           <div className="rounded-xl border border-border bg-background p-6">
