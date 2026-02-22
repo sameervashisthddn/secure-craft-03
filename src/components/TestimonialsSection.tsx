@@ -56,11 +56,16 @@ const TestimonialsSection = () => {
         <div className="relative mx-auto max-w-2xl">
           <div className="rounded-2xl border border-border bg-background p-8 text-center shadow-sm sm:p-10">
             <Quote className="mx-auto mb-4 h-8 w-8 text-primary/30" />
-            <blockquote className="mb-6 text-lg italic leading-relaxed text-foreground">
-              "{t.quote}"
-            </blockquote>
-            <p className="font-semibold text-foreground">{t.name}</p>
-            <p className="text-sm text-muted-foreground">{t.company}</p>
+            <div
+              key={current}
+              className="animate-fade-in"
+            >
+              <blockquote className="mb-6 text-lg italic leading-relaxed text-foreground">
+                "{t.quote}"
+              </blockquote>
+              <p className="font-semibold text-foreground">{t.name}</p>
+              <p className="text-sm text-muted-foreground">{t.company}</p>
+            </div>
           </div>
 
           {/* Navigation */}
