@@ -127,8 +127,10 @@ Page: ${pageUrl}
 
   if (submitted) {
     return (
-      <div className="rounded-2xl border border-border bg-secondary p-10 text-center">
-        <CheckCircle className="mx-auto mb-4 h-14 w-14 text-primary" />
+      <div className="animate-fade-in rounded-2xl border border-border bg-secondary p-10 text-center">
+        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 animate-scale-in">
+          <CheckCircle className="h-7 w-7 text-primary" />
+        </div>
         <h3 className="mb-2 text-2xl font-bold text-foreground">Request Received</h3>
         <p className="text-muted-foreground">
           Thanks — our partner team will respond with clarifications or a quote within 24–48 hours.

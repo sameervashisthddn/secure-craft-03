@@ -68,7 +68,10 @@ const ContactSection = () => {
     return (
       <section id="contact" className="section-padding section-alt">
         <div className="container mx-auto px-6">
-          <div className="mx-auto max-w-xl py-16 text-center">
+          <div className="animate-fade-in mx-auto max-w-xl py-16 text-center">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 animate-scale-in">
+              <Mail className="h-7 w-7 text-primary" />
+            </div>
             <p className="text-lg font-semibold text-primary">Thank you!</p>
             <p className="mt-2 text-sm text-muted-foreground">Your message has been sent. We'll respond within one business day.</p>
           </div>
