@@ -48,7 +48,7 @@ const ContactSection = () => {
     try {
       const { data, error } = await supabase.functions.invoke("send-email", {
         body: {
-          to: "leads@crabtreesolutions.us",
+          to: "partners@crabtreesolutions.us",
           subject: `Website Contact – Homepage | ${safeName}`,
           body: `${safeMessage}\n\nFrom: ${safeName} (${safeEmail})\nPage: ${pageUrl}`,
           replyTo: safeEmail,
