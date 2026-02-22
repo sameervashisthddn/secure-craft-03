@@ -98,7 +98,7 @@ Need White-Label Quote: ${form.needWhiteLabel}
 NDA Required: ${form.ndaRequired}
 Attachment: ${fileName || "None"}
     `.trim();
-    window.location.href = `mailto:info@crabtreesolutions.us?subject=${encodeURIComponent(
+    window.location.href = `mailto:sales@crabtreesolutions.us?subject=${encodeURIComponent(
       `[Partner Portal] Quote Request — ${form.companyName.slice(0, 60)}`
     )}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
