@@ -17,13 +17,13 @@ const steps = [
 ];
 
 const benefits = [
-  "Protect confidential data from unauthorized access and breaches",
-  "Methodical approach to detect and prioritize critical vulnerabilities",
-  "Comprehensive analysis across web/mobile apps, networks, and cloud",
+  "Protects confidential data from breaches and unauthorized access",
+  "Detects and prioritizes critical vulnerabilities methodically",
+  "Covers web/mobile apps, networks, and cloud environments",
   "Reduces financial and reputational risk from cyberattacks",
-  "Assists in achieving and maintaining compliance requirements",
-  "Strengthens client and stakeholder trust through demonstrated security diligence",
-  "Provides actionable insights to improve overall security posture over time",
+  "Supports compliance with HIPAA, SOC 2, PCI DSS, and more",
+  "Builds client and stakeholder trust through proven security",
+  "Delivers actionable insights for continuous security improvement",
 ];
 
 const whyNeeded = [
