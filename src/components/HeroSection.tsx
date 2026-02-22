@@ -70,11 +70,10 @@ const HeroSection = () => {
             </span>
 
             <h1 className="mb-4 text-4xl font-extrabold leading-tight text-foreground md:text-5xl lg:text-[3.25rem]">
-              Managed IT & Cybersecurity — Built for Compliance
+              Managed IT & Enterprise Cybersecurity for Growing U.S. Businesses
             </h1>
             <p className="mb-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              We assess your infrastructure first, then deliver secure, reliable,
-              and cost-effective IT solutions tailored to your business.
+              Stop worrying about downtime, security gaps, and compliance risks. We assess your infrastructure first — then deliver secure, reliable, and cost-effective IT solutions tailored to your business.
             </p>
 
             {/* Secondary CTA */}
