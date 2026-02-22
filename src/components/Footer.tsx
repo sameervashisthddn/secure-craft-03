@@ -25,24 +25,24 @@ const Footer = () => {
 
   return (
     <footer className="border-t border-border bg-card">
-      <div className="container mx-auto px-6 py-16">
+      <div className="container mx-auto px-6 py-8">
         {/* Logo + Tagline */}
-        <div className="mb-12 flex flex-col items-center gap-4 border-b border-border pb-10 text-center lg:flex-row lg:items-center lg:text-left">
-          <img src={logo} alt="Crabtree Solutions Inc." className="h-16 rounded-md" />
+        <div className="mb-6 flex flex-col items-center gap-3 border-b border-border pb-6 text-center lg:flex-row lg:items-center lg:text-left">
+          <img src={logo} alt="Crabtree Solutions Inc." className="h-10 rounded-md" />
           <div>
-            <p className="text-lg font-semibold text-foreground">Crabtree Solutions Inc.</p>
-            <p className="text-sm text-muted-foreground">Secure Managed IT &amp; Cybersecurity Services</p>
+            <p className="text-sm font-semibold text-foreground">Crabtree Solutions Inc.</p>
+            <p className="text-xs text-muted-foreground">Secure Managed IT &amp; Cybersecurity Services</p>
           </div>
         </div>
 
         {/* 4-Column Grid */}
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {/* Column 1 — Contact */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest text-foreground">
+            <h4 className="mb-2 text-xs font-semibold uppercase tracking-widest text-foreground">
               Contact
             </h4>
-            <div className="space-y-3 text-sm leading-relaxed text-muted-foreground">
+            <div className="space-y-1.5 text-xs leading-relaxed text-muted-foreground">
               <p>
                 Email:{" "}
                 <a
@@ -63,10 +63,10 @@ const Footer = () => {
 
           {/* Column 2 — Solutions */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest text-foreground">
+            <h4 className="mb-2 text-xs font-semibold uppercase tracking-widest text-foreground">
               Solutions
             </h4>
-            <ul className="space-y-2.5 text-sm leading-relaxed text-muted-foreground">
+            <ul className="space-y-1 text-xs text-muted-foreground">
               <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="transition-colors hover:text-primary">Managed IT Services</a></li>
               <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="transition-colors hover:text-primary">Enterprise VPN Services</a></li>
               <li><Link to="/startup" className="transition-colors hover:text-primary">Startup IT Services</Link></li>
@@ -78,10 +78,10 @@ const Footer = () => {
 
           {/* Column 3 — Industries */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest text-foreground">
+            <h4 className="mb-2 text-xs font-semibold uppercase tracking-widest text-foreground">
               Industries
             </h4>
-            <ul className="space-y-2.5 text-sm leading-relaxed text-muted-foreground">
+            <ul className="space-y-1 text-xs text-muted-foreground">
               <li><Link to="/startup" className="transition-colors hover:text-primary">Startups</Link></li>
               <li><Link to="/industries/healthcare" className="transition-colors hover:text-primary">Healthcare</Link></li>
               <li><Link to="/industries/legal" className="transition-colors hover:text-primary">Legal</Link></li>
@@ -92,45 +92,17 @@ const Footer = () => {
 
           {/* Column 4 — Company */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest text-foreground">
+            <h4 className="mb-2 text-xs font-semibold uppercase tracking-widest text-foreground">
               Company
             </h4>
-            <ul className="space-y-2.5 text-sm">
-              <li>
-                <a href="/#about" onClick={(e) => handleNavClick(e, "#about")} className="text-muted-foreground transition-colors hover:text-primary">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="text-muted-foreground transition-colors hover:text-primary">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="/#contact" onClick={(e) => handleNavClick(e, "#contact")} className="text-muted-foreground transition-colors hover:text-primary">
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href="/#contact" onClick={(e) => handleNavClick(e, "#contact")} className="text-muted-foreground transition-colors hover:text-primary">
-                  Schedule Consultation
-                </a>
-              </li>
-              <li>
-              <Link to="/partnerships" className="font-medium text-primary transition-colors hover:text-primary/80">
-                  Partnerships →
-                </Link>
-              </li>
-              <li>
-                <Link to="/partner" className="text-muted-foreground transition-colors hover:text-primary">
-                  Partner Portal
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacy-policy" className="text-muted-foreground transition-colors hover:text-primary">
-                  Privacy Policy
-                </Link>
-              </li>
+            <ul className="space-y-1 text-xs">
+              <li><a href="/#about" onClick={(e) => handleNavClick(e, "#about")} className="text-muted-foreground transition-colors hover:text-primary">About Us</a></li>
+              <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="text-muted-foreground transition-colors hover:text-primary">Services</a></li>
+              <li><a href="/#contact" onClick={(e) => handleNavClick(e, "#contact")} className="text-muted-foreground transition-colors hover:text-primary">Contact</a></li>
+              <li><a href="/#contact" onClick={(e) => handleNavClick(e, "#contact")} className="text-muted-foreground transition-colors hover:text-primary">Schedule Consultation</a></li>
+              <li><Link to="/partnerships" className="font-medium text-primary transition-colors hover:text-primary/80">Partnerships →</Link></li>
+              <li><Link to="/partner" className="text-muted-foreground transition-colors hover:text-primary">Partner Portal</Link></li>
+              <li><Link to="/privacy-policy" className="text-muted-foreground transition-colors hover:text-primary">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>
@@ -138,7 +110,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-border">
-        <div className="container mx-auto px-6 py-5 text-center text-sm text-muted-foreground">
+        <div className="container mx-auto px-6 py-3 text-center text-xs text-muted-foreground">
           © {new Date().getFullYear()} Crabtree Solutions Inc. All rights reserved.
         </div>
       </div>
