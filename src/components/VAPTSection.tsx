@@ -22,6 +22,8 @@ const benefits = [
   "Comprehensive analysis across web/mobile apps, networks, and cloud",
   "Reduces financial and reputational risk from cyberattacks",
   "Assists in achieving and maintaining compliance requirements",
+  "Strengthens client and stakeholder trust through demonstrated security diligence",
+  "Provides actionable insights to improve overall security posture over time",
 ];
 
 const whyNeeded = [
