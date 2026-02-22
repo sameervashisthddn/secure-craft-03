@@ -81,6 +81,7 @@ function PartnerForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
+    const pageUrl = window.location.href;
     const body = `
 Partner Company: ${form.companyName.slice(0, MAX_SHORT)}
 Contact Name: ${form.yourName.slice(0, MAX_SHORT)}
@@ -97,9 +98,10 @@ Budget: ${form.budget.slice(0, MAX_SHORT)}
 Need White-Label Quote: ${form.needWhiteLabel}
 NDA Required: ${form.ndaRequired}
 Attachment: ${fileName || "None"}
+Page: ${pageUrl}
     `.trim();
-    window.location.href = `mailto:sales@crabtreesolutions.us?subject=${encodeURIComponent(
-      `[Partner Portal] Quote Request — ${form.companyName.slice(0, 60)}`
+    window.location.href = `mailto:partners@crabtreesolutions.us?subject=${encodeURIComponent(
+      `Website – Partner Portal Quote Request | ${form.companyName.slice(0, 60)}`
     )}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
   };

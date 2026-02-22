@@ -37,8 +37,9 @@ const ContactSection = () => {
     const safeName = form.name.trim().slice(0, MAX_NAME);
     const safeEmail = form.email.trim().slice(0, MAX_EMAIL);
     const safeMessage = form.message.trim().slice(0, MAX_MESSAGE);
+    const pageUrl = window.location.href;
 
-    window.location.href = `mailto:sales@crabtreesolutions.us?subject=${encodeURIComponent(`Inquiry from ${safeName}`)}&body=${encodeURIComponent(safeMessage)}%0A%0AFrom: ${encodeURIComponent(safeName)} (${encodeURIComponent(safeEmail)})`;
+    window.location.href = `mailto:sales@crabtreesolutions.us?subject=${encodeURIComponent(`Website Contact – Homepage | ${safeName}`)}&body=${encodeURIComponent(`${safeMessage}\n\nFrom: ${safeName} (${safeEmail})\nPage: ${pageUrl}`)}`;
   };
 
   return (

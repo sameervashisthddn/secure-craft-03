@@ -29,11 +29,12 @@ const HeroSection = () => {
     const safeName = form.name.trim().slice(0, MAX_NAME);
     const safeEmail = form.email.trim().slice(0, MAX_EMAIL);
     const safeCompany = form.company.trim().slice(0, MAX_COMPANY);
+    const pageUrl = window.location.href;
 
     window.location.href = `mailto:sales@crabtreesolutions.us?subject=${encodeURIComponent(
-      `Free Security Assessment Request from ${safeName}`
+      `Website – Free Security Assessment Request | ${safeName}`
     )}&body=${encodeURIComponent(
-      `Name: ${safeName}\nEmail: ${safeEmail}\nCompany: ${safeCompany || "N/A"}\n\nRequesting a free security assessment.`
+      `Name: ${safeName}\nEmail: ${safeEmail}\nCompany: ${safeCompany || "N/A"}\n\nRequesting a free security assessment.\n\nPage: ${pageUrl}`
     )}`;
     setSubmitted(true);
   };
