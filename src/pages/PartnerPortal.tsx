@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 import {
   Shield,
   CheckCircle,
@@ -35,6 +37,8 @@ const MAX_SHORT = 120;
 
 function PartnerForm() {
   const fileRef = useRef<HTMLInputElement>(null);
+  const { toast } = useToast();
+  const [sending, setSending] = useState(false);
   const [form, setForm] = useState({
     companyName: "",
     yourName: "",
@@ -78,7 +82,7 @@ function PartnerForm() {
     setErrors((prev) => ({ ...prev, [e.target.name]: "" }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
     const pageUrl = window.location.href;
@@ -100,10 +104,25 @@ NDA Required: ${form.ndaRequired}
 Attachment: ${fileName || "None"}
 Page: ${pageUrl}
     `.trim();
-    window.location.href = `mailto:partners@crabtreesolutions.us?subject=${encodeURIComponent(
-      `Website – Partner Portal Quote Request | ${form.companyName.slice(0, 60)}`
-    )}&body=${encodeURIComponent(body)}`;
-    setSubmitted(true);
+
+    setSending(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-email", {
+        body: {
+          to: "partner@crabtreesolutions.us",
+          subject: `Website – Partner Portal Quote Request | ${form.companyName.slice(0, 60)}`,
+          body,
+          replyTo: form.email.trim(),
+        },
+      });
+      if (error) throw error;
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Failed to send partner form:", err);
+      toast({ title: "Something went wrong", description: "Please try again or email us directly.", variant: "destructive" });
+    } finally {
+      setSending(false);
+    }
   };
 
   if (submitted) {

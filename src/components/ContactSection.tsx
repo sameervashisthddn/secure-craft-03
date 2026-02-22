@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const MAX_NAME = 100;
 const MAX_EMAIL = 255;
@@ -9,6 +11,9 @@ const MAX_MESSAGE = 1000;
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
+  const [sending, setSending] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const { toast } = useToast();
 
   const validate = () => {
     const errs: typeof errors = {};
@@ -30,7 +35,7 @@ const ContactSection = () => {
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
@@ -39,8 +44,38 @@ const ContactSection = () => {
     const safeMessage = form.message.trim().slice(0, MAX_MESSAGE);
     const pageUrl = window.location.href;
 
-    window.location.href = `mailto:sales@crabtreesolutions.us?subject=${encodeURIComponent(`Website Contact – Homepage | ${safeName}`)}&body=${encodeURIComponent(`${safeMessage}\n\nFrom: ${safeName} (${safeEmail})\nPage: ${pageUrl}`)}`;
+    setSending(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-email", {
+        body: {
+          to: "leads@crabtreesolutions.us",
+          subject: `Website Contact – Homepage | ${safeName}`,
+          body: `${safeMessage}\n\nFrom: ${safeName} (${safeEmail})\nPage: ${pageUrl}`,
+          replyTo: safeEmail,
+        },
+      });
+      if (error) throw error;
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Failed to send contact form:", err);
+      toast({ title: "Something went wrong", description: "Please try again or email us directly.", variant: "destructive" });
+    } finally {
+      setSending(false);
+    }
   };
+
+  if (submitted) {
+    return (
+      <section id="contact" className="section-padding section-alt">
+        <div className="container mx-auto px-6">
+          <div className="mx-auto max-w-xl py-16 text-center">
+            <p className="text-lg font-semibold text-primary">Thank you!</p>
+            <p className="mt-2 text-sm text-muted-foreground">Your message has been sent. We'll respond within one business day.</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="contact" className="section-padding section-alt">
@@ -96,7 +131,9 @@ const ContactSection = () => {
               </div>
             </div>
             <div className="text-center">
-              <Button type="submit" size="lg" className="w-full sm:w-auto">Send Message</Button>
+              <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={sending}>
+                {sending ? "Sending…" : "Send Message"}
+              </Button>
             </div>
           </form>
 
