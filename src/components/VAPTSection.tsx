@@ -41,51 +41,51 @@ const VAPTSection = () => {
           Alerting today for a safer tomorrow. Identify weaknesses before attackers do and prioritize remediation to reduce risk across applications, networks, and cloud.
         </p>
 
-        {/* What is VAPT */}
-        <div className="mx-auto max-w-3xl text-center mb-12">
-          <h3 className="mb-3 text-xl font-semibold text-foreground">What is VAPT?</h3>
-          <p className="text-sm leading-relaxed text-muted-foreground">
-            VAPT combines two complementary approaches: Vulnerability Assessment to discover weaknesses across assets, and Penetration Testing to safely exploit and validate real-world impact. Together they provide a comprehensive view of security posture and actionable remediation guidance.
-          </p>
+        {/* Two-column: What is VAPT + Why needed */}
+        <div className="mb-12 grid gap-8 md:grid-cols-2">
+          <div className="rounded-xl border border-border bg-background p-6">
+            <h3 className="mb-3 text-xl font-semibold text-foreground">What is VAPT?</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              VAPT combines two complementary approaches: Vulnerability Assessment to discover weaknesses across assets, and Penetration Testing to safely exploit and validate real-world impact. Together they provide a comprehensive view of security posture and actionable remediation guidance.
+            </p>
+          </div>
+          <div className="rounded-xl border border-border bg-background p-6">
+            <h3 className="mb-4 text-xl font-semibold text-foreground">Why do organizations need VAPT?</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              {whyNeeded.map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        {/* Why organizations need VAPT */}
-        <div className="mx-auto max-w-3xl text-center mb-12">
-          <h3 className="mb-4 text-xl font-semibold text-foreground">Why do organizations need VAPT?</h3>
-          <ul className="mx-auto inline-block space-y-2 text-left text-sm text-muted-foreground">
-            {whyNeeded.map((item) => (
-              <li key={item} className="flex items-start gap-2">
-                <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Typical VAPT Process */}
-        <div className="mx-auto max-w-3xl text-center mb-12">
-          <h3 className="mb-4 text-xl font-semibold text-foreground">Typical VAPT Process</h3>
-          <ol className="mx-auto inline-block space-y-2 text-left">
-            {steps.map((s, i) => (
-              <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">{i + 1}</span>
-                {s}
-              </li>
-            ))}
-          </ol>
-        </div>
-
-        {/* Benefits */}
-        <div className="mx-auto max-w-3xl text-center mb-12">
-          <h3 className="mb-4 text-xl font-semibold text-foreground">Benefits</h3>
-          <ul className="mx-auto inline-block space-y-2 text-left text-sm text-muted-foreground">
-            {benefits.map((b) => (
-              <li key={b} className="flex items-start gap-2">
-                <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
-                {b}
-              </li>
-            ))}
-          </ul>
+        {/* Two-column: Process + Benefits */}
+        <div className="mb-12 grid gap-8 md:grid-cols-2">
+          <div className="rounded-xl border border-border bg-background p-6">
+            <h3 className="mb-4 text-xl font-semibold text-foreground">Typical VAPT Process</h3>
+            <ol className="space-y-2">
+              {steps.map((s, i) => (
+                <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">{i + 1}</span>
+                  {s}
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="rounded-xl border border-border bg-background p-6">
+            <h3 className="mb-4 text-xl font-semibold text-foreground">Benefits</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              {benefits.map((b) => (
+                <li key={b} className="flex items-start gap-2">
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* CTA */}
