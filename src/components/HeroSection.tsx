@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Shield, ArrowRight, MapPin } from "lucide-react";
-import heroImg from "@/assets/hero-services.jpg";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const MAX_NAME = 100;
 const MAX_EMAIL = 255;
@@ -11,6 +12,8 @@ const HeroSection = () => {
   const [form, setForm] = useState({ name: "", email: "", company: "" });
   const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const { toast } = useToast();
 
   const validate = () => {
     const errs: typeof errors = {};
@@ -22,7 +25,7 @@ const HeroSection = () => {
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
@@ -31,12 +34,24 @@ const HeroSection = () => {
     const safeCompany = form.company.trim().slice(0, MAX_COMPANY);
     const pageUrl = window.location.href;
 
-    window.location.href = `mailto:sales@crabtreesolutions.us?subject=${encodeURIComponent(
-      `Website – Free Security Assessment Request | ${safeName}`
-    )}&body=${encodeURIComponent(
-      `Name: ${safeName}\nEmail: ${safeEmail}\nCompany: ${safeCompany || "N/A"}\n\nRequesting a free security assessment.\n\nPage: ${pageUrl}`
-    )}`;
-    setSubmitted(true);
+    setSending(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-email", {
+        body: {
+          to: "support@crabtreesolutions.us",
+          subject: `Website – Free Security Assessment Request | ${safeName}`,
+          body: `Name: ${safeName}\nEmail: ${safeEmail}\nCompany: ${safeCompany || "N/A"}\n\nRequesting a free security assessment.\n\nPage: ${pageUrl}`,
+          replyTo: safeEmail,
+        },
+      });
+      if (error) throw error;
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Failed to send assessment request:", err);
+      toast({ title: "Something went wrong", description: "Please try again or email us directly.", variant: "destructive" });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -100,8 +115,7 @@ const HeroSection = () => {
                     Thank you!
                   </p>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Your email client should open shortly. We'll be in touch
-                    soon.
+                    Your request has been sent. We'll be in touch soon.
                   </p>
                 </div>
               ) : (
@@ -156,9 +170,9 @@ const HeroSection = () => {
                       placeholder="Company Name (optional)"
                     />
                   </div>
-                  <Button type="submit" size="lg" className="w-full gap-2">
-                    Book Free Security Assessment
-                    <ArrowRight className="h-4 w-4" />
+                  <Button type="submit" size="lg" className="w-full gap-2" disabled={sending}>
+                    {sending ? "Sending…" : "Book Free Security Assessment"}
+                    {!sending && <ArrowRight className="h-4 w-4" />}
                   </Button>
                 </form>
               )}
