@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight, Quote, Star, ShieldCheck, FileCheck, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const testimonials = [
@@ -8,19 +8,30 @@ const testimonials = [
       "Crabtree Solutions helped us achieve HIPAA compliance seamlessly. Their assessment-first approach gave us confidence from day one.",
     name: "Dr. Sarah Mitchell",
     company: "Greenfield Medical Group",
+    rating: 5,
   },
   {
     quote:
       "Their proactive IT management reduced our downtime by 80%. We finally have an IT partner that understands our business.",
     name: "James Rivera",
     company: "Summit Staffing Co.",
+    rating: 5,
   },
   {
     quote:
       "The cybersecurity audit uncovered gaps we didn't know existed. Their team fixed everything quickly and professionally.",
     name: "Linda Chen",
     company: "Apex Legal Advisors",
+    rating: 5,
   },
+];
+
+const certifications = [
+  { icon: ShieldCheck, label: "HIPAA Compliant" },
+  { icon: FileCheck, label: "SOC 2 Aligned" },
+  { icon: Lock, label: "PCI DSS Ready" },
+  { icon: ShieldCheck, label: "Zero-Trust Security" },
+  { icon: FileCheck, label: "NIST Framework" },
 ];
 
 const TestimonialsSection = () => {
@@ -56,6 +67,14 @@ const TestimonialsSection = () => {
         <div className="relative mx-auto max-w-2xl">
           <div className="rounded-2xl border border-border bg-background p-8 text-center shadow-sm sm:p-10">
             <Quote className="mx-auto mb-4 h-8 w-8 text-primary/30" />
+
+            {/* Star Rating */}
+            <div className="mb-4 flex items-center justify-center gap-1">
+              {Array.from({ length: t.rating }).map((_, i) => (
+                <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+              ))}
+            </div>
+
             <blockquote className="mb-6 text-lg italic leading-relaxed text-foreground">
               "{t.quote}"
             </blockquote>
@@ -93,6 +112,24 @@ const TestimonialsSection = () => {
             >
               <ChevronRight className="h-4 w-4" />
             </Button>
+          </div>
+        </div>
+
+        {/* Certification Badges */}
+        <div className="mt-14 border-t border-border pt-10">
+          <p className="mb-6 text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            Compliance & Certifications
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            {certifications.map((cert) => (
+              <div
+                key={cert.label}
+                className="flex items-center gap-2 rounded-full border border-green-200 bg-green-50 px-4 py-2 text-xs font-medium text-green-700"
+              >
+                <cert.icon className="h-4 w-4" />
+                {cert.label}
+              </div>
+            ))}
           </div>
         </div>
       </div>
