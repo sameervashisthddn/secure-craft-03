@@ -110,7 +110,10 @@ const HeroSection = () => {
               </p>
 
               {submitted ? (
-                <div className="py-8 text-center">
+                <div className="animate-fade-in py-8 text-center">
+                  <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 animate-scale-in">
+                    <Shield className="h-7 w-7 text-primary" />
+                  </div>
                   <p className="text-lg font-semibold text-primary">
                     Thank you!
                   </p>
