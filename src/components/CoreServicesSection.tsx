@@ -1,4 +1,4 @@
-import { Server, ShieldCheck, Globe, ClipboardCheck, Lock } from "lucide-react";
+import { Server, ShieldCheck, Globe, ClipboardCheck, Lock, Flame } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
@@ -31,6 +31,12 @@ const services = [
     title: "Enterprise VPN & Secure Remote Access",
     text: "Site-to-site and remote access VPN solutions with zero-trust policies, MFA enforcement, and compliance-ready configurations.",
     cta: "Learn More",
+  },
+  {
+    icon: Flame,
+    title: "Firewall & Network Security",
+    text: "Next-gen firewall deployment, network segmentation, and real-time intrusion detection to protect your perimeter and internal traffic.",
+    cta: "Secure Your Network",
   },
 ];
 
