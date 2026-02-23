@@ -54,7 +54,7 @@ const TestimonialsSection = () => {
         </p>
 
         <div className="relative mx-auto max-w-2xl">
-          <div className="rounded-2xl border border-border bg-background p-8 text-center shadow-sm sm:p-10">
+          <div className="rounded-2xl border border-border bg-background p-8 text-center shadow-sm sm:p-10 min-h-[220px] flex flex-col items-center justify-center">
             <Quote className="mx-auto mb-4 h-8 w-8 text-primary/30" />
             <div
               key={current}
