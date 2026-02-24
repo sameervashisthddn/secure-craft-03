@@ -101,7 +101,7 @@ const VAPTSection = () => {
         </div>
 
         {/* Service Cards */}
-        <div className="grid gap-6 sm:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {vaptCards.map((c) => (
             <div key={c.title} className="rounded-xl border border-border bg-background p-6 text-center">
               <c.icon className="mx-auto mb-3 h-8 w-8 text-primary" />

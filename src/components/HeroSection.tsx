@@ -61,7 +61,7 @@ const HeroSection = () => {
       <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="container relative mx-auto px-6">
-        <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
+        <div className="flex flex-col items-center gap-8 sm:gap-12 lg:flex-row lg:gap-16">
           {/* Left: Copy */}
           <div className="flex-1">
             <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
@@ -69,7 +69,7 @@ const HeroSection = () => {
               Assessment-First IT & Security
             </span>
 
-            <h1 className="mb-4 text-4xl font-extrabold leading-tight text-foreground md:text-5xl lg:text-[3.25rem]">
+            <h1 className="mb-4 text-3xl font-extrabold leading-tight text-foreground sm:text-4xl md:text-5xl lg:text-[3.25rem]">
               Managed IT & Enterprise Cybersecurity for Growing U.S. Businesses
             </h1>
             <p className="mb-8 max-w-lg text-lg leading-relaxed text-muted-foreground">

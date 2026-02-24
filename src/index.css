@@ -58,7 +58,13 @@
   }
 
   [id] {
-    scroll-margin-top: 8.5rem;
+    scroll-margin-top: 6rem;
+  }
+
+  @media (min-width: 640px) {
+    [id] {
+      scroll-margin-top: 8.5rem;
+    }
   }
 }
 
