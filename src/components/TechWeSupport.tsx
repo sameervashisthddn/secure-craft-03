@@ -21,16 +21,16 @@ const TechWeSupport = () => {
         <h2 className="mb-8 text-center text-3xl font-bold text-primary md:text-4xl">
           Technologies We Support
         </h2>
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-6">
           {techs.map((t) => (
             <div
               key={t.name}
-              className="flex items-center justify-center rounded-xl border border-border bg-background p-6 shadow-sm transition-shadow hover:shadow-md"
+              className="flex items-center justify-center rounded-xl border border-border bg-background p-4 shadow-sm transition-shadow hover:shadow-md sm:p-6"
             >
               <img
                 src={t.logo}
                 alt={t.name}
-                className={`${t.className} object-contain`}
+                className={`${t.className} max-h-10 sm:max-h-none w-full object-contain`}
               />
             </div>
           ))}

@@ -112,9 +112,9 @@ const IndustryPageLayout = ({
               <h2 className="mb-6 text-center text-3xl font-bold text-foreground">
                 Compliance & Standards
               </h2>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap justify-center gap-3">
                 {compliance.map((c) => (
-                  <span key={c} className="rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+                  <span key={c} className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary sm:px-4 sm:text-sm">
                     {c}
                   </span>
                 ))}
