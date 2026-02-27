@@ -1,30 +1,35 @@
-import { Search, ShieldCheck, FileText, Heart, Users, Quote } from "lucide-react";
+import { Search, ShieldCheck, FileText, Heart, Users, Quote, Zap } from "lucide-react";
 
 const values = [
   {
     icon: Search,
-    title: "Assess First, Always",
-    desc: "We review your infrastructure before recommending a single thing. Every solution we propose is grounded in your reality.",
+    title: "Discovery Before Direction",
+    desc: "We dig into your infrastructure before we prescribe anything. Every recommendation starts with evidence, not assumptions.",
   },
   {
     icon: ShieldCheck,
-    title: "Compliance You Can Stand Behind",
-    desc: "HIPAA, SOC 2, PCI DSS — built into your environment, not bolted on at audit time.",
+    title: "Compliance That Never Sleeps",
+    desc: "HIPAA, SOC 2, PCI DSS — woven into your environment from day one, not scrambled together when auditors come knocking.",
   },
   {
     icon: FileText,
-    title: "You Choose What You Need",
-    desc: "Free assessment. Transparent plan. No bundles, no pressure, no surprises on your invoice.",
+    title: "Radical Transparency",
+    desc: "Free assessment. Itemized plan. Zero hidden fees, zero bundled fluff — you see every line before you sign off.",
   },
   {
     icon: Heart,
-    title: "Industries That Can't Afford Downtime",
-    desc: "Healthcare, legal, HR — we understand your obligations better than most, and we deliver accordingly.",
+    title: "Built for Regulated Industries",
+    desc: "Healthcare, legal, HR & staffing — we speak your compliance language and deliver with the urgency your industry demands.",
   },
   {
     icon: Users,
-    title: "Support That Feels Like a Partner",
-    desc: "US-based, certified, and genuinely invested in keeping your business running.",
+    title: "Partnership, Not a Ticket Queue",
+    desc: "US-based, certified engineers who know your environment by name — not a rotating cast reading from a script.",
+  },
+  {
+    icon: Zap,
+    title: "Proactive by Design",
+    desc: "We don't wait for alerts to pile up. Continuous monitoring, automated patching, and forward-looking strategy keep problems from ever reaching your desk.",
   },
 ];
 
