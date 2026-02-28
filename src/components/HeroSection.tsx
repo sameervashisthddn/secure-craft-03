@@ -73,7 +73,7 @@ const HeroSection = () => {
               Managed IT & Enterprise Cybersecurity for Growing U.S. Businesses
             </h1>
             <p className="mb-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              Stop worrying about downtime, security gaps, and compliance risks. We assess your infrastructure first — then deliver secure, reliable, and cost-effective IT solutions tailored to your business.
+              We assess your infrastructure first — uncovering risks before they become problems — then deliver secure, reliable, and cost-effective IT solutions built around the way your business actually runs. No more downtime anxiety, security blind spots, or last-minute compliance scrambles.
             </p>
 
             {/* Secondary CTA */}
