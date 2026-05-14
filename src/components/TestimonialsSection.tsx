@@ -3,7 +3,7 @@ const TestimonialsSection = () => {
     <section className="section-padding section-alt">
       <div className="container mx-auto px-6">
         <h2 className="mb-4 text-center text-3xl font-bold text-primary md:text-4xl">
-          Trusted by IT Leaders Across Industries
+          Client References Available Upon Request
         </h2>
         <p className="mx-auto mb-12 max-w-3xl text-center text-muted-foreground">
           Client references and engagement examples are available upon request, subject to confidentiality and client approval.

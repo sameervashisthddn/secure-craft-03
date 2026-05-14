@@ -3,8 +3,8 @@ import { MapPin, Clock, Award, Settings } from "lucide-react";
 const reasons = [
   {
     icon: MapPin,
-    title: "US-Based Support",
-    text: "Local expertise with nationwide reach — real people, real time zones.",
+    title: "U.S.-Aligned Support",
+    text: "Support designed around U.S. business expectations, clear communication, and practical SMB needs.",
   },
   {
     icon: Clock,

@@ -24,7 +24,7 @@ const values = [
   {
     icon: Users,
     title: "Partnership, Not a Ticket Queue",
-    desc: "US-based, certified engineers who know your environment by name — not a rotating cast reading from a script.",
+    desc: "A consistent support team that learns your environment and works with clear ownership — not a rotating ticket queue.",
   },
   {
     icon: Zap,
@@ -75,11 +75,11 @@ const AboutSection = () => {
               "We don't wait for things to break. We make sure they don't."
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold text-primary">
-              <span>10+ Years Experience</span>
+              <span>Practical IT &amp; Security Experience</span>
               <span className="hidden h-4 w-px bg-primary/30 sm:block" />
               <span>Compliance-Ready From Day One</span>
               <span className="hidden h-4 w-px bg-primary/30 sm:block" />
-              <span>US-Based Support</span>
+              <span>U.S.-Aligned Support</span>
             </div>
           </div>
         </div>
