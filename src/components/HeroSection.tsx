@@ -70,10 +70,10 @@ const HeroSection = () => {
             </span>
 
             <h1 className="mb-4 text-3xl font-extrabold leading-tight text-foreground sm:text-4xl md:text-5xl lg:text-[3.25rem]">
-              Managed IT & Enterprise Cybersecurity for Growing U.S. Businesses
+              Security-First Managed IT for Small U.S. Businesses
             </h1>
             <p className="mb-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              We assess your infrastructure first — uncovering risks before they become problems — then deliver secure, reliable, and cost-effective IT solutions built around the way your business actually runs. No more downtime anxiety, security blind spots, or last-minute compliance scrambles.
+              We help small U.S. businesses strengthen IT support, Microsoft 365, endpoint security, firewall/VPN controls, backup readiness, and security documentation — without unnecessary complexity or high upfront cost.
             </p>
 
             {/* Secondary CTA */}
