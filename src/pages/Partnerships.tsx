@@ -90,9 +90,9 @@ export default function Partnerships() {
           name="description"
           content="Crabtree Solutions Inc collaborates with strategic partners, technology providers, and IT service organizations across the United States to deliver secure, reliable, and scalable IT infrastructure solutions."
         />
-        <link rel="canonical" href="https://crabtreesolutions.us/partnerships" />
+        <link rel="canonical" href="https://www.crabtreesolutions.us/partnerships" />
         <meta property="og:title" content="Partnerships | Crabtree Solutions Inc." />
-        <meta property="og:url" content="https://crabtreesolutions.us/partnerships" />
+        <meta property="og:url" content="https://www.crabtreesolutions.us/partnerships" />
       </Helmet>
 
       <Navbar />

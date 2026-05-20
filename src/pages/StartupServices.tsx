@@ -121,10 +121,10 @@ const StartupServices = () => {
       <Helmet>
         <title>IT Services for Startups – Crabtree Solutions Inc.</title>
         <meta name="description" content="Affordable, scalable IT infrastructure and cybersecurity services built for startups and growing businesses." />
-        <link rel="canonical" href="https://crabtreesolutions.us/startup" />
+        <link rel="canonical" href="https://www.crabtreesolutions.us/startup" />
         <meta property="og:title" content="IT Services for Startups – Crabtree Solutions Inc." />
         <meta property="og:description" content="Affordable, scalable IT infrastructure and cybersecurity services built for startups and growing businesses." />
-        <meta property="og:url" content="https://crabtreesolutions.us/startup" />
+        <meta property="og:url" content="https://www.crabtreesolutions.us/startup" />
       </Helmet>
       <Navbar />
 

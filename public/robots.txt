@@ -4,4 +4,4 @@ Allow: /
 # Disallow admin/internal paths (none currently, but best practice)
 Disallow: /404
 
-Sitemap: https://crabtreesolutions.us/sitemap.xml
+Sitemap: https://www.crabtreesolutions.us/sitemap.xml

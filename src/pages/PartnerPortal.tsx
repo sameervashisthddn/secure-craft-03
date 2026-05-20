@@ -316,9 +316,9 @@ export default function PartnerPortal() {
           name="description"
           content="White-label IT delivery for small MSPs and IT vendors in the USA. Submit client requirements and receive proposal-ready quotes you can present as your own."
         />
-        <link rel="canonical" href="https://crabtreesolutions.us/partner" />
+        <link rel="canonical" href="https://www.crabtreesolutions.us/partner" />
         <meta property="og:title" content="Partner & Vendor Portal | Crabtree Solutions Inc." />
-        <meta property="og:url" content="https://crabtreesolutions.us/partner" />
+        <meta property="og:url" content="https://www.crabtreesolutions.us/partner" />
       </Helmet>
 
       <Navbar />
