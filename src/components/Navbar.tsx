@@ -147,7 +147,10 @@ const Navbar = () => {
                 onMouseEnter={() => openDropdown(l.label)}
                 onMouseLeave={closeDropdown}
               >
-                <button className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-accent hover:text-primary whitespace-nowrap">
+                <button
+                  onClick={() => setDropdown(dropdown === l.label ? null : l.label)}
+                  className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-accent hover:text-primary whitespace-nowrap"
+                >
                   {l.label}
                   <ChevronDown className="h-3.5 w-3.5 opacity-60" />
                 </button>
