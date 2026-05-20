@@ -8,8 +8,8 @@ const values = [
   },
   {
     icon: ShieldCheck,
-    title: "Compliance That Never Sleeps",
-    desc: "HIPAA, SOC 2, PCI DSS — woven into your environment from day one, not scrambled together when auditors come knocking.",
+    title: "Compliance-Aligned by Design",
+    desc: "Compliance-aligned infrastructure support for HIPAA, SOC 2, and PCI DSS environments — built into your IT operations, not bolted on later.",
   },
   {
     icon: FileText,

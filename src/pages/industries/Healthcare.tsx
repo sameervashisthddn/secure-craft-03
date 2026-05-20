@@ -13,7 +13,7 @@ const HealthcarePage = () => (
     challenges={[
       { icon: <Shield className="h-6 w-6" />, title: "HIPAA Compliance", description: "Navigate complex regulatory requirements with properly configured systems, access controls, and audit trails." },
       { icon: <Lock className="h-6 w-6" />, title: "Patient Data Protection", description: "Encrypt and secure PHI across all endpoints, networks, and cloud environments." },
-      { icon: <Server className="h-6 w-6" />, title: "System Uptime", description: "Ensure 24/7 availability for EHR systems, telehealth platforms, and critical clinical applications." },
+      { icon: <Server className="h-6 w-6" />, title: "System Reliability", description: "Improve uptime and reliability for EHR systems, telehealth platforms, and critical clinical applications with monitoring and proactive maintenance." },
       { icon: <FileCheck className="h-6 w-6" />, title: "Audit Readiness", description: "Maintain documentation and configurations that satisfy OCR audits and breach notification requirements." },
     ]}
     services={[

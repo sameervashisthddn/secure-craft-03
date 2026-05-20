@@ -218,7 +218,7 @@ export default function Partnerships() {
             Technology Partners
           </h2>
           <p className="mx-auto mb-10 max-w-2xl text-center text-lg text-muted-foreground">
-            Crabtree Solutions Inc works with industry-leading technology platforms to deliver
+            Crabtree Solutions Inc works with leading technology platforms to deliver
             secure, scalable, and enterprise-grade IT infrastructure and security solutions.
           </p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

@@ -2,11 +2,11 @@ import { TrendingDown, ShieldCheck, Eye, DollarSign, ClipboardCheck, Headphones 
 
 const outcomes = [
   { icon: TrendingDown, text: "Reduced downtime with proactive monitoring and managed IT support" },
-  { icon: ShieldCheck, text: "Strengthened security posture through endpoint protection and firewall hardening" },
-  { icon: Eye, text: "Full visibility into network activity, user access, and system health" },
+  { icon: ShieldCheck, text: "Stronger security posture through endpoint protection and firewall hardening" },
+  { icon: Eye, text: "Better visibility into network activity, user access, and system health" },
   { icon: DollarSign, text: "Lower IT costs through right-sized infrastructure and vendor optimization" },
-  { icon: ClipboardCheck, text: "Audit-ready compliance for HIPAA, SOC 2, and PCI DSS requirements" },
-  { icon: Headphones, text: "Faster issue resolution with dedicated IT help desk and 24/7 support escalation" },
+  { icon: ClipboardCheck, text: "Compliance-aligned infrastructure support for HIPAA, SOC 2, and PCI DSS environments" },
+  { icon: Headphones, text: "Clear response SLAs with priority-based support and escalation per service plan" },
 ];
 
 const OutcomesSection = () => {
@@ -14,10 +14,10 @@ const OutcomesSection = () => {
     <section className="section-padding section-alt">
       <div className="container mx-auto px-6">
         <h2 className="mb-4 text-center text-3xl font-bold text-primary md:text-4xl">
-          What Our Managed IT Clients Achieve
+          What Our Managed IT Clients Work Toward
         </h2>
         <p className="mx-auto mb-10 max-w-2xl text-center text-muted-foreground">
-          Measurable improvements our clients see after partnering with us:
+          Practical improvements clients typically see when partnering with us:
         </p>
         <div className="mx-auto grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {outcomes.map((item) => (
