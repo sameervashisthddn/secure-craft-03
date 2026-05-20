@@ -71,14 +71,14 @@ const VAPTSection = () => {
         <div className="mb-12 grid gap-8 md:grid-cols-2">
           <div className="rounded-xl border border-border bg-background p-6">
             <h3 className="mb-4 text-xl font-semibold text-foreground">Typical VAPT Process</h3>
-            <ol className="space-y-2">
+            <ul className="list-none space-y-2 pl-0">
               {steps.map((s, i) => (
                 <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">{i + 1}</span>
                   {s}
                 </li>
               ))}
-            </ol>
+            </ul>
           </div>
           <div className="rounded-xl border border-border bg-background p-6">
             <h3 className="mb-4 text-xl font-semibold text-foreground">Benefits</h3>
