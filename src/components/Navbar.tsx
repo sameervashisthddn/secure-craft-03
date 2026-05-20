@@ -152,7 +152,7 @@ const Navbar = () => {
                   <ChevronDown className="h-3.5 w-3.5 opacity-60" />
                 </button>
                 {dropdown === l.label && (
-                  <div className="absolute left-1/2 top-full z-50 mt-1 w-52 -translate-x-1/2 rounded-xl border border-border bg-popover p-1.5 shadow-xl">
+                  <div className="absolute left-1/2 top-full z-50 mt-1 w-72 -translate-x-1/2 rounded-xl border border-border bg-popover p-1.5 shadow-xl">
                     {l.children.map((child) => (
                       <div key={child.label}>
                         {isRouteLink(child.href) ? (
