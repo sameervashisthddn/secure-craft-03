@@ -50,7 +50,7 @@ const ContactSection = () => {
         body: {
           to: "partners@crabtreesolutions.us",
           subject: `Website Contact – Homepage | ${safeName}`,
-          body: `${safeMessage}\n\nFrom: ${safeName} (${safeEmail})\nPage: ${pageUrl}`,
+          body: `${safeMessage}\n\nFrom: ${safeName} (${safeEmail})\nForm: Homepage Contact\nPage: ${pageUrl}`,
           replyTo: safeEmail,
         },
       });
@@ -72,8 +72,8 @@ const ContactSection = () => {
             <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 animate-scale-in">
               <Mail className="h-7 w-7 text-primary" />
             </div>
-            <p className="text-lg font-semibold text-primary">Thank you!</p>
-            <p className="mt-2 text-sm text-muted-foreground">Your message has been sent. We'll respond within one business day.</p>
+            <p className="text-lg font-semibold text-primary">Thank you. Your request has been received.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Our team will review the details and contact you shortly.</p>
           </div>
         </div>
       </section>
