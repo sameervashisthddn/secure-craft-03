@@ -69,19 +69,22 @@ const HeroSection = () => {
               Assessment-First IT & Security
             </span>
 
-            <h1 className="mb-4 text-3xl font-extrabold leading-tight text-foreground sm:text-4xl md:text-5xl lg:text-[3.25rem]">
+            <h1 className="mb-3 text-3xl font-extrabold leading-tight text-foreground sm:text-4xl md:text-5xl lg:text-[3.25rem]">
               Security-First Managed IT for Small U.S. Businesses
             </h1>
+            <p className="mb-4 max-w-lg text-base font-medium text-primary">
+              Built for SMBs that need secure IT support without hiring a full internal IT team.
+            </p>
             <p className="mb-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
               We help small U.S. businesses strengthen IT support, Microsoft 365, endpoint security, firewall/VPN controls, backup readiness, and security documentation — without unnecessary complexity or high upfront cost.
             </p>
 
             {/* Secondary CTA */}
             <a
-              href="#services"
+              href="#contact"
               className="mb-4 inline-flex items-center gap-2 rounded-lg border border-primary/20 px-5 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary/5"
             >
-              Explore Services
+              Get a Free Quote
               <ArrowRight className="h-4 w-4" />
             </a>
 
