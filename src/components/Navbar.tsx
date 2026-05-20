@@ -18,9 +18,12 @@ const navLinks: NavItem[] = [
     label: "Services",
     href: "/#services",
     children: [
-      { label: "Core Services", href: "/#services" },
-      { label: "VAPT", href: "/#vapt" },
-      { label: "Startup IT", href: "/startup" },
+      { label: "Managed IT Services", href: "/#services" },
+      { label: "Cybersecurity & Compliance Support", href: "/#services" },
+      { label: "Vulnerability Assessment & Pen Testing", href: "/#vapt" },
+      { label: "Enterprise VPN & Secure Remote Access", href: "/#services" },
+      { label: "Firewall & Network Security", href: "/#services" },
+      { label: "Startup IT & Security", href: "/startup" },
     ],
   },
   {
@@ -29,17 +32,18 @@ const navLinks: NavItem[] = [
     children: [
       { label: "Healthcare", href: "/industries/healthcare" },
       { label: "Legal", href: "/industries/legal" },
-      { label: "Staffing", href: "/industries/staffing" },
+      { label: "Staffing Agencies", href: "/industries/staffing" },
       { label: "Small & Midsize Business", href: "/industries/smb" },
+      { label: "Startups", href: "/startup" },
     ],
   },
   {
     label: "Partners",
     href: "/partnerships",
     children: [
-      { label: "Partnerships", href: "/partnerships" },
+      { label: "Strategic Partnerships", href: "/partnerships" },
       { label: "Partner Portal", href: "/partner" },
-      { label: "Request a Partner Quote", href: "/partner#partner-form" },
+      { label: "Become a Partner", href: "/partner#partner-form" },
     ],
   },
   { label: "About", href: "/#about" },
@@ -143,12 +147,15 @@ const Navbar = () => {
                 onMouseEnter={() => openDropdown(l.label)}
                 onMouseLeave={closeDropdown}
               >
-                <button className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-accent hover:text-primary whitespace-nowrap">
+                <button
+                  onClick={() => setDropdown(dropdown === l.label ? null : l.label)}
+                  className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-accent hover:text-primary whitespace-nowrap"
+                >
                   {l.label}
                   <ChevronDown className="h-3.5 w-3.5 opacity-60" />
                 </button>
                 {dropdown === l.label && (
-                  <div className="absolute left-1/2 top-full z-50 mt-1 w-52 -translate-x-1/2 rounded-xl border border-border bg-popover p-1.5 shadow-xl">
+                  <div className="absolute left-1/2 top-full z-50 mt-1 w-72 -translate-x-1/2 rounded-xl border border-border bg-popover p-1.5 shadow-xl">
                     {l.children.map((child) => (
                       <div key={child.label}>
                         {isRouteLink(child.href) ? (
