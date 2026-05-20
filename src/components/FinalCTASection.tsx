@@ -15,7 +15,7 @@ const FinalCTASection = () => {
         </p>
         <a href="#contact">
           <Button size="lg" className="gap-2">
-            Book Free Assessment <ArrowRight className="h-4 w-4" />
+            Request Free Assessment <ArrowRight className="h-4 w-4" />
           </Button>
         </a>
       </div>
