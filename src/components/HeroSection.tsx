@@ -105,7 +105,7 @@ const HeroSection = () => {
           <div className="w-full max-w-md flex-1">
             <div className="rounded-2xl border border-border bg-background p-6 shadow-xl shadow-primary/5 sm:p-8">
               <h2 className="mb-1 text-xl font-bold text-foreground">
-                Book Free Security Assessment
+                Request Free Security Assessment
               </h2>
               <p className="mb-6 text-sm text-muted-foreground">
                 We respond within one business day.
