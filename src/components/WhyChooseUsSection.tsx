@@ -8,18 +8,18 @@ const reasons = [
   },
   {
     icon: Clock,
-    title: "Fast Response SLAs",
-    text: "Industry-leading response times so your business never skips a beat.",
+    title: "Clear Response SLAs",
+    text: "Clear response SLAs with priority-based support for urgent business issues, defined per service plan.",
   },
   {
     icon: Award,
-    title: "Certified Professionals",
-    text: "Our team holds top certifications from Microsoft, Cisco, and CompTIA.",
+    title: "Experienced Engineers",
+    text: "Engineers experienced with Microsoft 365, firewalls, endpoint security, VPN, backup, and server environments.",
   },
   {
     icon: Settings,
     title: "Tailored IT Solutions",
-    text: "No cookie-cutter plans — every solution is built around your business needs.",
+    text: "No cookie-cutter plans — every solution is scoped around your actual environment and business needs.",
   },
 ];
 
@@ -31,8 +31,7 @@ const WhyChooseUsSection = () => {
           Why Choose Us
         </h2>
         <p className="mx-auto mb-10 max-w-lg text-center text-muted-foreground">
-          Trusted by businesses across the United States for reliable, expert IT
-          support.
+          Practical, security-first IT support for small U.S. businesses.
         </p>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {reasons.map((r) => (

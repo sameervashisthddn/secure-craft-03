@@ -5,37 +5,37 @@ const services = [
   {
     icon: Server,
     title: "Managed IT Services",
-    text: "24/7 monitoring, helpdesk, and proactive infrastructure management — so your team stays productive and your systems stay running.",
+    text: "24/7 monitoring with helpdesk support and escalation options based on the selected service plan — keeping systems stable and your team productive.",
     cta: "Schedule Consultation",
   },
   {
     icon: ShieldCheck,
-    title: "Cybersecurity & Compliance",
-    text: "Endpoint protection, threat detection, and compliance alignment for HIPAA, SOC 2, and PCI DSS regulated environments.",
+    title: "Cybersecurity & Compliance Support",
+    text: "Endpoint protection, email security, and compliance-aligned infrastructure support for HIPAA, SOC 2, and PCI DSS environments.",
     cta: "Talk to an Expert",
   },
   {
     icon: Globe,
     title: "Vulnerability Assessment & Pen Testing",
-    text: "Comprehensive security assessments to uncover gaps in your network, applications, and infrastructure before attackers do.",
+    text: "Security assessments to uncover gaps in your network, applications, and infrastructure — with prioritized, actionable remediation guidance.",
     cta: "Request Assessment",
   },
   {
     icon: ClipboardCheck,
     title: "Startup IT & Security",
-    text: "Right-sized IT infrastructure and security for early-stage companies — scalable, cost-effective, and built for growth.",
+    text: "Right-sized IT infrastructure and security for early-stage U.S. companies — scalable, cost-effective, and built for growth.",
     cta: "Get Started",
   },
   {
     icon: Lock,
     title: "Enterprise VPN & Secure Remote Access",
-    text: "Site-to-site and remote access VPN solutions with zero-trust policies, MFA enforcement, and compliance-ready configurations.",
+    text: "Site-to-site and remote access VPN with MFA enforcement and access controls aligned with zero-trust principles.",
     cta: "Learn More",
   },
   {
     icon: Flame,
     title: "Firewall & Network Security",
-    text: "Next-gen firewall deployment, network segmentation, and real-time intrusion detection to protect your perimeter and internal traffic.",
+    text: "Next-gen firewall deployment, network segmentation, and intrusion detection to strengthen your perimeter and internal traffic controls.",
     cta: "Secure Your Network",
   },
 ];
@@ -45,10 +45,10 @@ const CoreServicesSection = () => {
     <section id="services" className="section-padding section-alt">
       <div className="container mx-auto px-6">
         <h2 className="mb-2 text-center text-3xl font-bold text-primary md:text-4xl">
-          Managed IT & Cybersecurity Services
+          Managed IT &amp; Cybersecurity Services
         </h2>
-        <p className="mx-auto mb-10 max-w-lg text-center text-muted-foreground">
-          End-to-end IT management and security solutions — built for compliance, reliability, and business continuity.
+        <p className="mx-auto mb-10 max-w-xl text-center text-muted-foreground">
+          End-to-end IT management and security support — scoped for reliability, business continuity, and compliance-aligned environments.
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
