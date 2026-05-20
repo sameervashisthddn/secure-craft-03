@@ -26,6 +26,7 @@ const Index = () => {
       <Helmet>
         <title>Crabtree Solutions Inc. | Security-First Managed IT for U.S. SMBs</title>
         <meta name="description" content="Crabtree Solutions Inc. provides security-first managed IT, cybersecurity, Microsoft 365, firewall, VPN, endpoint protection, backup readiness, and compliance-aligned support for small U.S. businesses." />
+        <link rel="canonical" href="https://crabtreesolutions.us/" />
         <meta property="og:title" content="Crabtree Solutions Inc. | Security-First Managed IT for U.S. SMBs" />
         <meta property="og:description" content="Security-first managed IT, cybersecurity, Microsoft 365, firewall, VPN, endpoint protection, backup readiness, and compliance-aligned support for small U.S. businesses." />
         <meta property="og:url" content="https://crabtreesolutions.us/" />
