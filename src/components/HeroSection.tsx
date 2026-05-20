@@ -176,7 +176,7 @@ const HeroSection = () => {
                     />
                   </div>
                   <Button type="submit" size="lg" className="w-full gap-2" disabled={sending}>
-                    {sending ? "Sending…" : "Book Free Security Assessment"}
+                    {sending ? "Sending…" : "Request Free Security Assessment"}
                     {!sending && <ArrowRight className="h-4 w-4" />}
                   </Button>
                 </form>
