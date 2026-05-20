@@ -18,9 +18,12 @@ const navLinks: NavItem[] = [
     label: "Services",
     href: "/#services",
     children: [
-      { label: "Core Services", href: "/#services" },
-      { label: "VAPT", href: "/#vapt" },
-      { label: "Startup IT", href: "/startup" },
+      { label: "Managed IT Services", href: "/#services" },
+      { label: "Cybersecurity & Compliance Support", href: "/#services" },
+      { label: "Vulnerability Assessment & Pen Testing", href: "/#vapt" },
+      { label: "Enterprise VPN & Secure Remote Access", href: "/#services" },
+      { label: "Firewall & Network Security", href: "/#services" },
+      { label: "Startup IT & Security", href: "/startup" },
     ],
   },
   {
@@ -29,17 +32,18 @@ const navLinks: NavItem[] = [
     children: [
       { label: "Healthcare", href: "/industries/healthcare" },
       { label: "Legal", href: "/industries/legal" },
-      { label: "Staffing", href: "/industries/staffing" },
+      { label: "Staffing Agencies", href: "/industries/staffing" },
       { label: "Small & Midsize Business", href: "/industries/smb" },
+      { label: "Startups", href: "/startup" },
     ],
   },
   {
     label: "Partners",
     href: "/partnerships",
     children: [
-      { label: "Partnerships", href: "/partnerships" },
+      { label: "Strategic Partnerships", href: "/partnerships" },
       { label: "Partner Portal", href: "/partner" },
-      { label: "Request a Partner Quote", href: "/partner#partner-form" },
+      { label: "Become a Partner", href: "/partner#partner-form" },
     ],
   },
   { label: "About", href: "/#about" },
