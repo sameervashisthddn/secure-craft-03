@@ -6,7 +6,7 @@ const services = [
     icon: Server,
     title: "Managed IT Services",
     text: "24/7 monitoring with helpdesk support and escalation options based on the selected service plan — keeping systems stable and your team productive.",
-    cta: "Schedule Consultation",
+    cta: "Request Free Assessment",
   },
   {
     icon: ShieldCheck,
