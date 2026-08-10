@@ -91,10 +91,6 @@ const HeroSection = () => {
             {/* Trust signals */}
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
               <span className="flex items-center gap-1.5">
-                <span className="h-2 w-2 rounded-full bg-green-500" />
-                HIPAA · SOC 2 · PCI DSS Aligned
-              </span>
-              <span className="flex items-center gap-1.5">
                 <MapPin className="h-3.5 w-3.5" />
                 Serving businesses across the United States
               </span>
