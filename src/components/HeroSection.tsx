@@ -36,9 +36,9 @@ const HeroSection = () => {
 
     setSending(true);
     try {
-      const { data, error } = await supabase.functions.invoke("send-email", {
+      const { error } = await supabase.functions.invoke("send-email", {
         body: {
-          to: "partners@crabtreesolutions.us",
+          formType: "security_assessment",
           subject: `Website – Free Security Assessment Request | ${safeName}`,
           body: `Name: ${safeName}\nEmail: ${safeEmail}\nCompany: ${safeCompany || "N/A"}\n\nRequesting a free security assessment.\n\nPage: ${pageUrl}`,
           replyTo: safeEmail,
