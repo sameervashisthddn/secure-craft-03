@@ -21,7 +21,7 @@ const navLinks: NavItem[] = [
       { label: "Managed IT Services", href: "/#services" },
       { label: "Cybersecurity & Compliance Support", href: "/#services" },
       { label: "Vulnerability Assessment & Pen Testing", href: "/#vapt" },
-      { label: "Enterprise VPN & Secure Remote Access", href: "/#services" },
+      { label: "Business VPN Deployment & Secure Remote Access", href: "/#services" },
       { label: "Firewall & Network Security", href: "/#services" },
       { label: "Startup IT & Security", href: "/startup" },
     ],
