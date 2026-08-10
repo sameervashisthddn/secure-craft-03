@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import Seo from "@/components/Seo";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
@@ -23,15 +23,12 @@ import StartupTeaser from "@/components/StartupTeaser";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Crabtree Solutions Inc. | Security-First Managed IT for U.S. SMBs</title>
-        <meta name="description" content="Crabtree Solutions Inc. provides security-first managed IT, cybersecurity, Microsoft 365, firewall, VPN, endpoint protection, backup readiness, and compliance-aligned support for small U.S. businesses." />
-        <link rel="canonical" href="https://www.crabtreesolutions.us/" />
-        <meta property="og:title" content="Crabtree Solutions Inc. | Security-First Managed IT for U.S. SMBs" />
-        <meta property="og:description" content="Security-first managed IT, cybersecurity, Microsoft 365, firewall, VPN, endpoint protection, backup readiness, and compliance-aligned support for small U.S. businesses." />
-        <meta property="og:url" content="https://www.crabtreesolutions.us/" />
-        <meta property="og:type" content="website" />
-      </Helmet>
+      <Seo
+        title="Crabtree Solutions Inc. | Security-First Managed IT for U.S. SMBs"
+        description="Crabtree Solutions Inc. provides security-first managed IT, cybersecurity, Microsoft 365, firewall, VPN, endpoint protection, backup readiness, and compliance-aligned support for small U.S. businesses."
+        path="/"
+      />
+
       <Navbar />
       <HeroSection />
       <ScrollReveal><WhatWeDoSection /></ScrollReveal>

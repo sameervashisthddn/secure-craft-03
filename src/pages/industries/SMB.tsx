@@ -6,7 +6,7 @@ const SMBPage = () => (
     title="SMB IT Services"
     metaTitle="Managed IT for Small & Midsize Businesses – Crabtree Solutions"
     metaDescription="Enterprise-grade IT services and cybersecurity for small and midsize businesses. Get the right IT infrastructure without enterprise costs."
-    canonicalPath="/industries/smb"
+    canonicalPath="/industries/smb/"
     headline="Enterprise-Grade IT for Small & Midsize Businesses"
     subheadline="SMB IT & Cybersecurity"
     intro="We bring enterprise-level IT security and infrastructure to growing businesses — right-sized and budget-conscious, without unnecessary complexity."

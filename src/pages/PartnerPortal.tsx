@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Helmet } from "react-helmet-async";
+import Seo from "@/components/Seo";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -310,16 +310,11 @@ const engagements = [
 export default function PartnerPortal() {
   return (
     <>
-      <Helmet>
-        <title>Partner & Vendor Portal | Crabtree Solutions Inc.</title>
-        <meta
-          name="description"
-          content="White-label IT delivery for small MSPs and IT vendors in the USA. Submit client requirements and receive proposal-ready quotes you can present as your own."
-        />
-        <link rel="canonical" href="https://www.crabtreesolutions.us/partner" />
-        <meta property="og:title" content="Partner & Vendor Portal | Crabtree Solutions Inc." />
-        <meta property="og:url" content="https://www.crabtreesolutions.us/partner" />
-      </Helmet>
+      <Seo
+        title="Partner & Vendor Portal | Crabtree Solutions Inc."
+        description="White-label IT delivery for small MSPs and IT vendors in the USA. Submit client requirements and receive proposal-ready quotes you can present as your own."
+        path="/partner/"
+      />
 
       <Navbar />
 

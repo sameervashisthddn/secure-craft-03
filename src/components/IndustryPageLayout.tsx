@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Shield, Server, Lock, FileCheck, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -33,15 +33,7 @@ const IndustryPageLayout = ({
 }: IndustryPageProps) => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>{metaTitle}</title>
-        <meta name="description" content={metaDescription} />
-        <link rel="canonical" href={`https://crabtreesolutions.us${canonicalPath}`} />
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:url" content={`https://crabtreesolutions.us${canonicalPath}`} />
-        <meta property="og:type" content="website" />
-      </Helmet>
+      <Seo title={metaTitle} description={metaDescription} path={canonicalPath} />
       <Navbar />
       <main>
         {/* Hero */}
