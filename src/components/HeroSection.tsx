@@ -76,7 +76,7 @@ const HeroSection = () => {
               Built for SMBs that need secure IT support without hiring a full internal IT team.
             </p>
             <p className="mb-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              We help small U.S. businesses strengthen IT support, Microsoft 365, endpoint security, firewall management, customer-specific site-to-site VPN and secure remote-access controls, backup readiness, and security documentation — without unnecessary complexity or high upfront costs.
+              We help small U.S. businesses strengthen IT support, Microsoft 365, endpoint security, firewall management, customer-specific site-to-site IPsec VPN connectivity, backup readiness, and security documentation — without unnecessary complexity or high upfront costs.
             </p>
 
             {/* Secondary CTA */}
