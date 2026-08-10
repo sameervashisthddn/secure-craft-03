@@ -25,7 +25,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Seo
         title="Crabtree Solutions Inc. | Security-First Managed IT for U.S. SMBs"
-        description="Crabtree Solutions Inc. provides security-first managed IT, cybersecurity, Microsoft 365, firewall, VPN, endpoint protection, backup readiness, and compliance-aligned support for small U.S. businesses."
+        description="Crabtree Solutions Inc. provides security-first managed IT, cybersecurity, Microsoft 365, firewall management, customer-specific site-to-site IPsec VPN deployment, endpoint protection, backup readiness, and compliance-aligned support for small U.S. businesses."
         path="/"
       />
 

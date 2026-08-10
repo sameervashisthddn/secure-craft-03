@@ -68,7 +68,7 @@ const Footer = () => {
             </h4>
             <ul className="space-y-1 text-xs text-muted-foreground">
               <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="transition-colors hover:text-primary">Managed IT Services</a></li>
-              <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="transition-colors hover:text-primary">Business VPN Deployment &amp; Secure Remote Access</a></li>
+              <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="transition-colors hover:text-primary">Site-to-Site IPsec VPN Deployment</a></li>
               <li><Link to="/startup" className="transition-colors hover:text-primary">Startup IT Services</Link></li>
               <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="transition-colors hover:text-primary">Infrastructure Audit &amp; Optimization</a></li>
               <li><a href="/#vapt" onClick={(e) => handleNavClick(e, "#vapt")} className="transition-colors hover:text-primary">Endpoint Security</a></li>
