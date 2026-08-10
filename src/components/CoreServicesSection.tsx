@@ -28,8 +28,8 @@ const services = [
   },
   {
     icon: Lock,
-    title: "Enterprise VPN & Secure Remote Access",
-    text: "Site-to-site and remote access VPN with MFA enforcement and access controls aligned with zero-trust principles.",
+    title: "Business VPN Deployment & Secure Remote Access",
+    text: "Customer-specific site-to-site and remote-access VPN deployment with MFA, firewall policies, and controlled access. Designed for authorized business connectivity—not consumer VPN, a public proxy, or general internet resale.",
     cta: "Learn More",
   },
   {
