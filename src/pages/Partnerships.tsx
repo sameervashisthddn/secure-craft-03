@@ -19,7 +19,7 @@ import {
   EyeOff,
   Layers,
 } from "lucide-react";
-import eliteRcmLogo from "@/assets/partners/elite-rcm-logo.png";
+import turmericBillingLogo from "@/assets/partners/turmeric-billing-logo.png";
 import fortinetLogo from "@/assets/vendors/fortinet.png";
 import sophosLogo from "@/assets/vendors/sophos.png";
 import sentineloneLogo from "@/assets/vendors/sentinelone.png";
@@ -108,9 +108,9 @@ export default function Partnerships() {
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
             Crabtree Solutions Inc collaborates with strategic partners, technology providers, and IT
-            service organizations across the United States to deliver secure, reliable, and scalable
-            IT infrastructure solutions. Our partnerships are built on professionalism, trust, and
-            long-term mutual success.
+            service organizations supporting authorized operations across the United States and India
+            to deliver secure, reliable, and scalable IT infrastructure solutions. Our partnerships are
+            built on professionalism, trust, and long-term mutual success.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a href="#channel-partner">
@@ -151,26 +151,29 @@ export default function Partnerships() {
               {/* Logo + Badge Header */}
               <div className="mb-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
                 <a
-                  href="https://eliterevenuecyclemanagementsystem.com"
+                  href="https://www.turmericbilling.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-40 w-full sm:h-52 sm:w-96 shrink-0 items-center justify-center rounded-xl border border-border bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                  className="flex h-40 w-full sm:h-52 sm:w-96 shrink-0 flex-col items-center justify-center gap-4 rounded-xl border border-border bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
                 >
                   <img
-                    src={eliteRcmLogo}
-                    alt="Elite Revenue Cycle Management System"
-                    className="h-full w-full object-contain"
+                    src={turmericBillingLogo}
+                    alt="Turmeric Billing"
+                    className="h-16 w-16 object-contain sm:h-20 sm:w-20"
                   />
+                  <span className="text-xl font-bold tracking-tight text-[#1a2b4c] sm:text-2xl">
+                    Turmeric Billing
+                  </span>
                 </a>
                 <div>
                   <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-semibold text-primary">
-                    <Award className="h-3 w-3" /> Strategic Partner — USA
+                    <Award className="h-3 w-3" /> Strategic Healthcare Technology Relationship
                   </div>
                   <h3 className="text-xl font-bold text-foreground">
-                    Elite Revenue Cycle Management System
+                    Turmeric Billing &amp; Elite RCM Private Limited
                   </h3>
                   <p className="text-sm font-medium text-muted-foreground">
-                    Healthcare Revenue Cycle Management Organization — USA
+                    U.S. Medical Billing Operations with Authorized India Delivery Support
                   </p>
                 </div>
               </div>
@@ -178,18 +181,18 @@ export default function Partnerships() {
               {/* Body */}
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Crabtree Solutions Inc maintains a strategic partnership with Elite Revenue Cycle
-                  Management System, supporting their IT infrastructure and collaborating on aligned
-                  technical initiatives.
+                  Crabtree Solutions Inc. provides IT infrastructure support to Elite RCM Private
+                  Limited, the India-based delivery organization supporting Turmeric Billing's U.S.
+                  medical billing operations. The relationship focuses on secure, reliable
+                  infrastructure and aligned technical initiatives.
                 </p>
                 <p>
-                  This relationship reflects a shared commitment to operational reliability,
-                  security, and professional collaboration. Through this partnership, both
-                  organizations benefit from strengthened infrastructure, coordinated technical
-                  expertise, and long-term operational stability.
+                  This collaboration supports operational reliability, professional coordination, and
+                  long-term technology alignment across authorized U.S. and India operations.
                 </p>
                 <p className="font-medium text-foreground">
-                  This partnership reflects trust, professional collaboration, and long-term mutual growth.
+                  This relationship reflects trust, professional collaboration, and a shared
+                  commitment to reliable IT operations.
                 </p>
               </div>
 
