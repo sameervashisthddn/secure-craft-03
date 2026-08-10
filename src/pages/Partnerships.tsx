@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import Seo from "@/components/Seo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -84,16 +84,11 @@ const strategicBenefits = [
 export default function Partnerships() {
   return (
     <>
-      <Helmet>
-        <title>Partnerships | Crabtree Solutions Inc.</title>
-        <meta
-          name="description"
-          content="Crabtree Solutions Inc collaborates with strategic partners, technology providers, and IT service organizations across the United States to deliver secure, reliable, and scalable IT infrastructure solutions."
-        />
-        <link rel="canonical" href="https://www.crabtreesolutions.us/partnerships" />
-        <meta property="og:title" content="Partnerships | Crabtree Solutions Inc." />
-        <meta property="og:url" content="https://www.crabtreesolutions.us/partnerships" />
-      </Helmet>
+      <Seo
+        title="Partnerships | Crabtree Solutions Inc."
+        description="Crabtree Solutions Inc. collaborates with strategic technology and IT service partners supporting authorized operations across the United States and India."
+        path="/partnerships/"
+      />
 
       <Navbar />
 
