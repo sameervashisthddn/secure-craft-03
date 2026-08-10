@@ -15,6 +15,7 @@ import SMBPage from "./pages/industries/SMB";
 import PartnerPortal from "./pages/PartnerPortal";
 import Partnerships from "./pages/Partnerships";
 import ScrollToTop from "./components/ScrollToTop";
+import Unsubscribe from "./pages/Unsubscribe";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="/industries/smb" element={<SMBPage />} />
             <Route path="/partner" element={<PartnerPortal />} />
             <Route path="/partnerships" element={<Partnerships />} />
+            <Route path="/unsubscribe" element={<Unsubscribe />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

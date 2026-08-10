@@ -14,14 +14,24 @@ const RECIPIENTS: Record<string, string> = {
   partner_request: "partners@crabtreesolutions.us",
 };
 
+const FORM_LABELS: Record<string, string> = {
+  security_assessment: "Security Assessment Request",
+  general_inquiry: "General Inquiry",
+  partner_request: "Partner Request",
+};
+
 const MAX_SUBJECT = 200;
 const MAX_BODY = 10000;
 const MAX_EMAIL = 255;
+const MAX_SHORT = 200;
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const clean = (v: unknown, max: number) =>
   typeof v === "string" ? v.replace(/[\r\n]+/g, "\n").trim().slice(0, max) : "";
+
+const cleanLine = (v: unknown, max: number) =>
+  typeof v === "string" ? v.replace(/[\r\n]+/g, " ").trim().slice(0, max) : "";
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -40,10 +50,17 @@ Deno.serve(async (req) => {
       return json({ error: "Invalid request body" }, 400);
     }
 
-    const { formType, subject: rawSubject, body: rawBody, replyTo: rawReplyTo } =
-      payload as Record<string, unknown>;
+    const {
+      formType,
+      subject: rawSubject,
+      body: rawBody,
+      replyTo: rawReplyTo,
+      company: rawCompany,
+      sourcePage: rawSourcePage,
+    } = payload as Record<string, unknown>;
 
-    const to = typeof formType === "string" ? RECIPIENTS[formType] : undefined;
+    const type = typeof formType === "string" ? formType : "";
+    const to = RECIPIENTS[type];
     if (!to) {
       return json({ error: "Unknown form type" }, 400);
     }
@@ -54,43 +71,60 @@ Deno.serve(async (req) => {
       return json({ error: "Missing required fields: subject, body" }, 400);
     }
 
-    const replyToCandidate = clean(rawReplyTo, MAX_EMAIL);
-    const replyTo = EMAIL_RE.test(replyToCandidate) ? replyToCandidate : undefined;
+    const replyToCandidate = cleanLine(rawReplyTo, MAX_EMAIL);
+    const visitorEmail = EMAIL_RE.test(replyToCandidate) ? replyToCandidate : "";
 
-    const SENDGRID_API_KEY = Deno.env.get("SENDGRID_API_KEY");
-    if (!SENDGRID_API_KEY) {
-      console.error("SENDGRID_API_KEY is not configured");
+    // Fall back to parsing structured lines out of the plain-text body so the
+    // notification always carries company / source page context.
+    const pick = (label: string) => {
+      const m = body.match(new RegExp(`^${label}:\\s*(.+)$`, "im"));
+      return m ? m[1].trim().slice(0, MAX_SHORT) : "";
+    };
+
+    const company = cleanLine(rawCompany, MAX_SHORT) || pick("Company");
+    const sourcePage = cleanLine(rawSourcePage, MAX_SHORT) || pick("Page");
+
+    const supabaseUrl = Deno.env.get("SUPABASE_URL");
+    const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+    if (!supabaseUrl || !serviceKey) {
+      console.error("Missing Supabase environment configuration");
       return json({ error: "Email service unavailable" }, 503);
     }
 
-    const message: Record<string, unknown> = {
-      personalizations: [{ to: [{ email: to }] }],
-      from: { email: "support@crabtreesolutions.us", name: "Crabtree Solutions" },
-      subject,
-      content: [{ type: "text/plain", value: body }],
-    };
-    if (replyTo) message.reply_to = { email: replyTo };
-
-    const sgResponse = await fetch("https://api.sendgrid.com/v3/mail/send", {
+    const response = await fetch(`${supabaseUrl}/functions/v1/send-transactional-email`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${SENDGRID_API_KEY}`,
+        Authorization: `Bearer ${serviceKey}`,
+        apikey: serviceKey,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(message),
+      body: JSON.stringify({
+        templateName: "website-form-notification",
+        recipientEmail: to,
+        idempotencyKey: `website-form-${crypto.randomUUID()}`,
+        templateData: {
+          formType: type,
+          formLabel: FORM_LABELS[type],
+          visitorEmail,
+          company,
+          sourcePage,
+          submittedAt: new Date().toISOString().replace("T", " ").slice(0, 16) + " UTC",
+          message: body,
+          fields: [{ label: "Form subject", value: subject }],
+        },
+      }),
     });
 
-    if (!sgResponse.ok) {
-      // Full provider error stays in server logs only.
-      const errorBody = await sgResponse.text();
+    if (!response.ok) {
+      const errorBody = await response.text();
       console.error(
-        `SendGrid send failed [${sgResponse.status}] formType=${formType} to=${to}: ${errorBody}`,
+        `Transactional send failed [${response.status}] formType=${type} to=${to}: ${errorBody}`,
       );
       return json({ error: "Email could not be delivered at this time" }, 502);
     }
 
-    await sgResponse.text();
-    console.log(`Email sent successfully — formType=${formType} to=${to} subject="${subject}"`);
+    await response.text();
+    console.log(`Email queued successfully — formType=${type} to=${to} subject="${subject}"`);
 
     return json({ success: true }, 200);
   } catch (error) {
