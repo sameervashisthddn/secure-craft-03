@@ -260,7 +260,7 @@ const StartupServices = () => {
                 variant="secondary"
                 className="mt-8 text-base px-8 py-6"
               >
-                Schedule Consultation
+                Request Free Assessment
               </Button>
             </a>
           </div>

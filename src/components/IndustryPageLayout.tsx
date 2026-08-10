@@ -124,7 +124,7 @@ const IndustryPageLayout = ({
             </p>
             <a href="/#contact">
               <Button size="lg" className="shadow-lg shadow-primary/25 gap-2">
-                Schedule a Consultation
+                Request Free Assessment
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </a>

@@ -107,7 +107,7 @@ const ContactSection = () => {
         </p>
 
         <div className="mx-auto max-w-xl">
-          <h3 className="mb-6 text-center text-xl font-semibold text-foreground">Request a Consultation</h3>
+          <h3 className="mb-6 text-center text-xl font-semibold text-foreground">Request Free Assessment</h3>
           <form onSubmit={handleSubmit} className="space-y-4" noValidate>
             <div>
               <label className="mb-1.5 block text-sm font-medium text-foreground">Work Email <span className="text-destructive">*</span></label>
@@ -171,7 +171,7 @@ const ContactSection = () => {
 
             <div className="text-center">
               <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={sending}>
-                {sending ? "Sending…" : "Send Inquiry"}
+                {sending ? "Sending…" : "Request Free Assessment"}
               </Button>
             </div>
           </form>

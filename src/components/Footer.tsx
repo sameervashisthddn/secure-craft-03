@@ -99,7 +99,7 @@ const Footer = () => {
               <li><a href="/#about" onClick={(e) => handleNavClick(e, "#about")} className="text-muted-foreground transition-colors hover:text-primary">About Us</a></li>
               <li><a href="/#services" onClick={(e) => handleNavClick(e, "#services")} className="text-muted-foreground transition-colors hover:text-primary">Services</a></li>
               <li><a href="/#contact" onClick={(e) => handleNavClick(e, "#contact")} className="text-muted-foreground transition-colors hover:text-primary">Contact</a></li>
-              <li><a href="/#contact" onClick={(e) => handleNavClick(e, "#contact")} className="text-muted-foreground transition-colors hover:text-primary">Schedule Consultation</a></li>
+              <li><a href="/#contact" onClick={(e) => handleNavClick(e, "#contact")} className="text-muted-foreground transition-colors hover:text-primary">Request Free Assessment</a></li>
               <li><Link to="/partnerships" className="font-medium text-primary transition-colors hover:text-primary/80">Partnerships →</Link></li>
               <li><a href="mailto:partners@crabtreesolutions.us" className="text-muted-foreground transition-colors hover:text-primary">partners@crabtreesolutions.us</a></li>
               <li><Link to="/partner" className="text-muted-foreground transition-colors hover:text-primary">Partner Portal</Link></li>

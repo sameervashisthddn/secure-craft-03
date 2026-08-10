@@ -96,7 +96,7 @@ const VAPTSection = () => {
         {/* CTA */}
         <div className="mb-12 text-center">
           <a href="#contact">
-            <Button size="lg">Get a Free Consultation</Button>
+            <Button size="lg">Request Free Security Assessment</Button>
           </a>
         </div>
 
