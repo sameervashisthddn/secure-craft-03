@@ -7,6 +7,8 @@ interface SeoProps {
   description: string;
   /** Canonical path including leading and trailing slash, e.g. "/startup/" */
   path: string;
+  /** When true, emit robots noindex, nofollow for this route only. */
+  noindex?: boolean;
 }
 
 /**
@@ -14,13 +16,15 @@ interface SeoProps {
  * Emits exactly one title, description, canonical, OG title/description/url
  * and Twitter title/description per route.
  */
-const Seo = ({ title, description, path }: SeoProps) => {
+const Seo = ({ title, description, path, noindex = false }: SeoProps) => {
   const url = `${SITE}${path}`;
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+      {noindex && <meta name="robots" content="noindex, nofollow" />}
       <link rel="canonical" href={url} />
+
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />

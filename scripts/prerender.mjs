@@ -30,7 +30,9 @@ const ROUTES = [
   '/industries/smb',
   '/partner',
   '/partnerships',
+  '/unsubscribe',
 ];
+
 
 const MIME_TYPES = {
   '.html': 'text/html',

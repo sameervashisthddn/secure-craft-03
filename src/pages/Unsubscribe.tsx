@@ -52,7 +52,9 @@ const Unsubscribe = () => {
         title="Unsubscribe | Crabtree Solutions"
         description="Manage your email preferences for Crabtree Solutions notifications."
         path="/unsubscribe/"
+        noindex
       />
+
       <div className="w-full max-w-md rounded-xl border bg-card p-8 text-center shadow-sm">
         <h1 className="text-2xl font-semibold text-primary mb-3">Email preferences</h1>
         {state === "loading" && <p className="text-muted-foreground">Checking your link…</p>}
