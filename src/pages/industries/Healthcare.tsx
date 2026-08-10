@@ -9,7 +9,7 @@ const HealthcarePage = () => (
     canonicalPath="/industries/healthcare"
     headline="Secure IT Infrastructure for Healthcare Providers"
     subheadline="Healthcare IT & Cybersecurity"
-    intro="We help clinics, hospitals, and health-tech companies protect patient data, maintain HIPAA compliance, and build reliable IT infrastructure that supports care delivery."
+    intro="We help clinics, hospitals, and health-tech companies protect patient data, strengthen HIPAA-aligned safeguards and compliance readiness, and build reliable IT infrastructure that supports care delivery."
     challenges={[
       { icon: <Shield className="h-6 w-6" />, title: "HIPAA Compliance", description: "Navigate complex regulatory requirements with properly configured systems, access controls, and audit trails." },
       { icon: <Lock className="h-6 w-6" />, title: "Patient Data Protection", description: "Encrypt and secure PHI across all endpoints, networks, and cloud environments." },

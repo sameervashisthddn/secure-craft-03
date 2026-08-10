@@ -29,7 +29,7 @@ const services = [
   {
     icon: Lock,
     title: "Business VPN Deployment & Secure Remote Access",
-    text: "Customer-specific site-to-site and remote-access VPN deployment with MFA, firewall policies, and controlled access. Designed for authorized business connectivity—not consumer VPN, a public proxy, or general internet resale.",
+    text: "Customer-specific site-to-site and remote-access VPN deployment with MFA, firewall policies, and controlled access for authorized business use. Crabtree Solutions does not provide or resell internet access and does not operate a consumer VPN, public proxy, anonymization service, or unrestricted internet-egress service.",
     cta: "Learn More",
   },
   {
